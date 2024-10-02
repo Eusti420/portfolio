@@ -1,0 +1,36 @@
+section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 37px;
+    padding-bottom: 37px;
+    position: fixed;  
+    top: 0;  
+    left: 0;  
+    z-index: 1000;  
+    >p {
+        color: #FFFFFF;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    >p:hover {
+        cursor: pointer;
+    }
+    >div {
+        display: flex;
+        gap: 29px;
+        >a{
+            color: #FFFFFF;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        >a:hover {
+            cursor: pointer;
+            color: #70e61c;
+            transition: 100ms ease-in;
+        }
+    }
+}
