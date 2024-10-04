@@ -93,8 +93,8 @@ h2 {
 .linkedIn-btn {
     height: 30px;
     width: 30px;
-    background-size: contain;  // Stellt sicher, dass das Bild die ganze Fläche füllt
-    background-repeat: no-repeat;  // Verhindert Bildwiederholung
+    background-size: contain;  
+    background-repeat: no-repeat; 
 }
 
 .github-btn {
@@ -117,10 +117,10 @@ h2 {
 }
 
 .mail-btn:hover {
-    background-image: url(../../../assets/icons/email-btn-hover.png); 
+    background-image: url(../../../assets/icons/mail-btn-hover.png); 
     height: 40px;
     width: 40px;
-    transition: 125s ease-in-out;  
+    transition: 125ms ease-in-out;  
 }
 
 .linkedIn-btn:hover {
@@ -142,8 +142,6 @@ h2 {
         font-size: 20px;
         height: 36px;
     }
-
-   
 }
 
 
