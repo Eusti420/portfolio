@@ -1,37 +1,49 @@
 section {
+    position: relative; // Container für die absolute Positionierung
     color: #FFFFFF;
-    background-image: url(../../../assets/img/hero-background.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.about-me-container {
+    overflow: hidden;
+  }
+  
+  .about-me-container {
     width: 50%;
-}
-
-h1 {
+  }
+  
+  h1 {
     font-size: 84px;
     font-weight: 700;
-}
-
-.content-container {
+  }
+  
+  .content-container {
     display: flex;
     padding-left: 100px;
     padding-right: 100px;
-}
-
-.img-container {
+    position: relative; // Damit die Kinder absolut positioniert werden können
+  }
+  
+  .img-container {
     width: 50%;
-}
-
-.description-container {
+    position: relative; // Dies ist wichtig, um das Bild der übergeordneten Ebene anzupassen
+    z-index: 2; // Damit das Bild im Vordergrund bleibt
+  }
+  
+  .description-container {
     display: flex;
     align-items: flex-start;
     padding-top: 24px;
-    >p {
-        padding-left: 24px;
-        font-size: 16px;
-        font-weight: 400;
+    > p {
+      padding-left: 24px;
+      font-size: 16px;
+      font-weight: 400;
     }
-}
+  }
+  
+  .background-img {
+    position: absolute;
+    top: 500px;
+    left: 0;
+    width: 100%; 
+    object-fit: cover;
+    z-index: 1; // Hintergrundbild liegt hinter dem img-container
+  }
+  
 
