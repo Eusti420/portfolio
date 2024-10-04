@@ -1,0 +1,37 @@
+section {
+    color: #FFFFFF;
+    background-image: url(../../../assets/img/hero-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about-me-container {
+    width: 50%;
+}
+
+h1 {
+    font-size: 84px;
+    font-weight: 700;
+}
+
+.content-container {
+    display: flex;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.img-container {
+    width: 50%;
+}
+
+.description-container {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 24px;
+    >p {
+        padding-left: 24px;
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+
