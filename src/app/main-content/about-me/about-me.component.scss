@@ -4,9 +4,7 @@ section {
     overflow: hidden;
   }
   
-  .about-me-container {
-    width: 50%;
-  }
+ 
   
   h1 {
     font-size: 84px;
@@ -21,7 +19,7 @@ section {
   }
   
   .img-container {
-    width: 50%;
+   
     position: relative; // Dies ist wichtig, um das Bild der übergeordneten Ebene anzupassen
     z-index: 2; // Damit das Bild im Vordergrund bleibt
   }
@@ -31,19 +29,67 @@ section {
     align-items: flex-start;
     padding-top: 24px;
     > p {
-      padding-left: 24px;
       font-size: 16px;
       font-weight: 400;
     }
   }
   
   .background-img {
-    position: absolute;
     top: 500px;
     left: 0;
     width: 100%; 
     object-fit: cover;
-    z-index: 1; // Hintergrundbild liegt hinter dem img-container
+    z-index: 1; 
+    height: 200px;
   }
+
+  .loaction-img, .idea-img, .puzzle-img {
+    cursor: pointer;
+    transition: all 125ms ease-in;
+  }
+  
+  .loaction-img {
+    background-image: url('../../../assets/icons/loaction.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    width: 84px;
+    height: 84px;
+    padding-right: 32px;
+  
+  }
+  
+  .loaction-img:hover {
+    background-image: url('../../../assets/icons/location-hover.png');
+    cursor: pointer;
+  }
+  
+  .idea-img {
+    background-image: url('../../../assets/icons/idea.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    width: 84px;
+    height: 84px;
+    padding-right: 32px
+  }
+  
+  .idea-img:hover {
+    background-image: url('../../../assets/icons/idea-hover.png');
+    cursor: pointer;
+  }
+  
+  .puzzle-img {
+    background-image: url('../../../assets/icons/puzzle.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    width: 84px;
+    height: 84px;
+    padding-right: 32px
+  }
+  
+  .puzzle-img:hover {
+    background-image: url('../../../assets/icons/puzzle-hover.png');
+    cursor: pointer;
+  }
+  
   
 
