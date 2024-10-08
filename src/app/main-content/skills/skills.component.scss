@@ -1,0 +1,199 @@
+section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1980px;
+    padding-left: 100px;
+    padding-bottom: 100px;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%; 
+}
+
+.existing-skills {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 64px; 
+    width: 100%; 
+}
+
+.continually-learning {
+    display: flex;
+    padding-top: 64px;
+}
+
+.skills-description-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%; 
+    padding-left: 64px; 
+}
+
+.p-header{
+    color: #FFFFFF;
+    font-size: 32px;
+    font-weight: 700;
+    padding-top: 32px !important;
+}
+
+.highlight-skill {
+    color: #9747ff; 
+}
+
+
+.skill-layout {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    gap: 12px;
+    flex-basis: calc(25% - 72px); 
+}
+
+.skill-layout img {
+    transition: transform 350ms ease-in-out; /* Übergangseffekt für die Rückkehrbewegung */
+}
+
+.skill-layout:hover img {
+    animation: jump 700ms ease-in-out forwards; /* Gesamtdauer der Animation: 275ms (50ms + 225ms) */
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0); /* Ausgangsposition */
+    }
+    20% { /* 50ms von 275ms = ~18% */
+        transform: translateY(-10px); /* Schnelle Bewegung nach oben */
+    }
+    100% {
+        transform: translateY(0); /* Langsame Rückkehr zur Ausgangsposition */
+    }
+}
+
+.continually-learning-layout {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    gap: 12px;
+    position: relative; /* Wichtig für die Positionierung der Sprechblase */
+}
+
+.learning-image {
+    transition: opacity 125ms ease-in-out, transform 125ms ease-in-out; /* Übergang für den Bildwechsel */
+    opacity: 1;
+}
+
+.continually-learning-layout:hover .learning-image {
+    content: url('../../../assets/icons/Continually learning-hover.png'); /* Wechselt das Bild beim Hover */
+    opacity: 1; /* Sicherstellen, dass das Bild vollständig sichtbar ist */
+}
+
+.speech-bubble {
+    position: absolute;
+    bottom: 110%; /* Platziert die Sprechblase über dem Bild */
+    left: 115%;
+    transform: translateX(-50%);
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    width: 200px;
+    text-align: center;
+    opacity: 0; /* Versteckt die Sprechblase zunächst durch Opazität */
+    transition: opacity 225ms ease-in-out; /* Übergangseffekt für die Sprechblase */
+    pointer-events: none; /* Verhindert, dass die Sprechblase Aktionen blockiert, wenn sie unsichtbar ist */
+}
+
+.continually-learning-layout:hover .speech-bubble {
+    opacity: 1; /* Zeigt die Sprechblase beim Hover an */
+    pointer-events: auto; /* Erlaubt Aktionen, wenn die Sprechblase sichtbar ist */
+}
+
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    top: 100%; /* Spitze der Sprechblase */
+    left: 20%;
+    transform: translateX(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: white transparent transparent transparent; /* Weiße Spitze */
+}
+
+.speech-bubble img {
+    width: 100%; 
+    margin-top: 10px;
+}
+
+.contact-btn-container {
+    display: flex;
+    padding-top: 32px;
+}
+
+.description-content {
+    padding-right: 100px;
+    > p{
+        color: #FFFFFF;
+        padding-top: 12px;
+    }
+}
+
+.contact-btn {
+    padding: 15px 30px 15px 30px;
+    background-color: #70E61C;
+    font-size: 20px;
+    border-radius: 10px;
+    color: #FFFFFF;
+    border: none;
+    text-decoration: none;
+    transition: 125ms ease-in;
+    transform-origin: left top;  
+}
+
+.contact-btn:hover {
+    cursor: pointer;
+    transform: scale(1.2);  
+    background-color: #9747ff;
+}
+
+.headline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding-bottom: 24px;
+}
+
+h1 {
+    color: #FFFFFF;
+    font-size: 90px;
+    font-weight: 700;
+}
+
+.custom-line {
+    width: 287px;
+    height: 4px;  
+    background-color: #1CDAE6;
+    border: none; 
+    border-top-left-radius: 4px;  
+    border-bottom-left-radius: 4px;  
+}
+
+
+
+
+
+
+
