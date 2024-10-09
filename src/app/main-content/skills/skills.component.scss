@@ -51,6 +51,8 @@ section {
     text-align: center;
     flex-direction: column;
     color: white;
+    text-wrap: wrap;
+    width: 64px;
     font-weight: 700;
     font-size: 16px;
     gap: 12px;
@@ -58,22 +60,22 @@ section {
 }
 
 .skill-layout img {
-    transition: transform 350ms ease-in-out; /* Übergangseffekt für die Rückkehrbewegung */
+    transition: transform 350ms ease-in-out; 
 }
 
 .skill-layout:hover img {
-    animation: jump 700ms ease-in-out forwards; /* Gesamtdauer der Animation: 275ms (50ms + 225ms) */
+    animation: jump 700ms ease-in-out forwards; 
 }
 
 @keyframes jump {
     0% {
-        transform: translateY(0); /* Ausgangsposition */
+        transform: translateY(0); 
     }
-    20% { /* 50ms von 275ms = ~18% */
-        transform: translateY(-10px); /* Schnelle Bewegung nach oben */
+    20% { 
+        transform: translateY(-10px); 
     }
     100% {
-        transform: translateY(0); /* Langsame Rückkehr zur Ausgangsposition */
+        transform: translateY(0); 
     }
 }
 
@@ -86,22 +88,22 @@ section {
     font-weight: 700;
     font-size: 16px;
     gap: 12px;
-    position: relative; /* Wichtig für die Positionierung der Sprechblase */
+    position: relative; 
 }
 
 .learning-image {
-    transition: opacity 125ms ease-in-out, transform 125ms ease-in-out; /* Übergang für den Bildwechsel */
+    transition: opacity 125ms ease-in-out, transform 125ms ease-in-out; 
     opacity: 1;
 }
 
 .continually-learning-layout:hover .learning-image {
-    content: url('../../../assets/icons/Continually learning-hover.png'); /* Wechselt das Bild beim Hover */
-    opacity: 1; /* Sicherstellen, dass das Bild vollständig sichtbar ist */
+    content: url('../../../assets/icons/Continually learning-hover.png');
+    opacity: 1; 
 }
 
 .speech-bubble {
     position: absolute;
-    bottom: 110%; /* Platziert die Sprechblase über dem Bild */
+    bottom: 110%; 
     left: 115%;
     transform: translateX(-50%);
     background-color: white;
@@ -111,25 +113,25 @@ section {
     border: none;
     width: 200px;
     text-align: center;
-    opacity: 0; /* Versteckt die Sprechblase zunächst durch Opazität */
-    transition: opacity 225ms ease-in-out; /* Übergangseffekt für die Sprechblase */
-    pointer-events: none; /* Verhindert, dass die Sprechblase Aktionen blockiert, wenn sie unsichtbar ist */
+    opacity: 0; 
+    transition: opacity 225ms ease-in-out; 
+    pointer-events: none; 
 }
 
 .continually-learning-layout:hover .speech-bubble {
-    opacity: 1; /* Zeigt die Sprechblase beim Hover an */
-    pointer-events: auto; /* Erlaubt Aktionen, wenn die Sprechblase sichtbar ist */
+    opacity: 1; 
+    pointer-events: auto; 
 }
 
 .speech-bubble::after {
     content: '';
     position: absolute;
-    top: 100%; /* Spitze der Sprechblase */
+    top: 100%; 
     left: 20%;
     transform: translateX(-50%);
     border-width: 10px;
     border-style: solid;
-    border-color: white transparent transparent transparent; /* Weiße Spitze */
+    border-color: white transparent transparent transparent; 
 }
 
 .speech-bubble img {
