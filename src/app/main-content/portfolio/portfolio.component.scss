@@ -52,21 +52,51 @@ h1 {
     padding-left: 100px;
     padding-right: 100px;
     padding-top: 24px;
-    >img {
-        height: 420px;
-        width: 420px;
-        object-fit: cover;
-    }
 }
 
 .project-container {
-    height: 620px;
-    width: 620px;
+ 
     border: 1px solid #70E61C;
     border-radius: 15px;
+    >img {
+        object-fit: cover;
+    }
+
+   
 }
+
+
 
 p {
     color: #FFFFFF;
     padding-left: 100px;
+}
+
+@media only screen and (max-width: 1440px) {
+    img {
+        height: 480px;
+        width: 480px;
+    }
+}
+
+@media only screen and (max-width: 1140px) {
+    img {
+        height: 360px;
+        width: 360px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    img {
+        height: 260px;
+        width: 260px;
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+    .portfolio-content-container {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
 }
