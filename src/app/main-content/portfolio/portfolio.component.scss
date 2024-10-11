@@ -1,9 +1,12 @@
 section {
     position: relative; 
     width: 100%;
-    height: 100vh;
     z-index: 1; 
     max-width: 1920px;
+}
+
+.project-intro-container {
+    padding-left: 100px;
 }
 
 .background {
@@ -55,22 +58,171 @@ h1 {
 }
 
 .project-container {
- 
-    border: 1px solid #70E61C;
+    position: relative;
+    border: 2px solid #70E61C;
     border-radius: 15px;
-    >img {
-        object-fit: cover;
+    overflow: hidden;
+    transition: transform 0.125s ease-in-out;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transition: transform 0.125s ease-in-out, opacity 0.125s ease-in-out;
+        transform: scale(1);
+        transform-origin: center // Vergrößerung startet von oben links
     }
 
-   
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6); 
+        opacity: 0;
+        z-index: 1;
+        transition: opacity 0.125s ease-in-out;
+
+        .overlay-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            padding-top: 64px;
+        }
+
+        .button-git {
+            background-color: transparent;
+            padding: 15px 30px;
+            border-radius: 10px;
+            border: 1px solid #1CDAE6;
+            font-weight: 400;
+            font-size: 23px;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.2s ease;
+
+            &:hover {
+                background-color: #1CDAE6;
+            }
+        }
+
+        .button-test {
+            background-color: #9747FF;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-weight: 400;
+            font-size: 23px;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.2s ease;
+
+            &:hover {
+                background-color: #56b719;
+            }
+        }
+
+        .description {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            background-color: white;
+            width: 100%;
+            height: 350px;
+            border-radius: 30px 30px 0px 0px;
+
+            h3 {
+                margin: 0;
+                
+                font-weight: 700;
+                font-size: 32px;
+                color: #9747FF;
+            }
+
+            p {
+                margin: 0;
+                color: black;
+                text-align: center;
+                text-wrap: wrap;
+                font-size: 23px;
+                font-weight: 400;
+                padding: 24px 48px 24px 48px;
+            }
+
+            div {
+                color: #70E61C;
+                font-size: 23px;
+                font-weight: 400;
+            }
+        }
+    }
+
+    &:hover {
+        img {
+            transform: scale(1.8); 
+            opacity: 0.8; 
+        }
+
+        .overlay {
+            opacity: 1; 
+        }
+    }
 }
-
-
 
 p {
     color: #FFFFFF;
-    padding-left: 100px;
 }
+
+.testimonials-container {
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+    padding-top: 64px;
+    width: 100%; /* Container nimmt die volle Breite ein */
+}
+
+.testimonials-layout {
+    border-radius: 32px;
+    border: 4px solid #9747FF;
+    padding: 48px 96px;
+    width: 800px;
+    height: 272px;
+    margin-right: 48px;
+}
+
+.testimonials-img-container {
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    border: 4px solid #70E61C;
+}
+
+.testimonials-img {
+    object-fit: cover;
+    height: 272px;
+    width: 272px;
+}
+
+.custom-line-testimonial {
+    height: 4px;
+    background-color: #70E61C;
+    border: none;
+    width: calc(100vw - 100px - 800px - 48px - 272px); /* Berechnung der verbleibenden Breite */
+}
+
+
+
+
+
 
 @media only screen and (max-width: 1440px) {
     img {
