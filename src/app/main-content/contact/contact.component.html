@@ -1,1 +1,54 @@
-<p>contact works!</p>
+<section class="background-color">
+    <div class="headline">
+        <h1>Contact</h1>
+        <hr class="custom-line">
+    </div>
+    <div class="contact-container">
+
+        <hr class="custom-line-content">
+
+        <div class="jc-sb">
+            <div class="contact-info">
+                <h2>Got a problem to solve?</h2>
+                <p>Contact me through this form, I am interested in hearing from you, knowing your ideas and 
+                    contributing to your projects with my work.           
+                </p><br>
+                <p>Need a Frontend Developer? <b>Contact me!</b></p>
+            </div>
+    
+            <div class="contact-form-container">
+                <mat-form-field>
+                    <mat-label>Your name</mat-label>
+                    <input matInput
+                            (blur)="updateErrorMessage()"
+                            required>
+                  </mat-form-field>
+                  
+                  <div class="email-container">
+                    <mat-form-field>
+                      <mat-label>Your email</mat-label>
+                      <input matInput
+                             placeholder="pat@example.com"
+                             [formControl]="email"
+                             (blur)="updateErrorMessage()"
+                             required>
+                      @if (email.invalid) {
+                        <mat-error>{{errorMessage}}</mat-error>
+                      }
+                    </mat-form-field>
+                  </div>
+                  
+
+                  <mat-form-field>
+                    <mat-label>Your message</mat-label>
+                    <textarea matInput
+                                (blur)="updateErrorMessage()"
+                                required>
+                    </textarea>
+                  </mat-form-field>
+                  
+            </div>
+        </div>
+        
+    </div>
+</section>
