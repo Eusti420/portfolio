@@ -55,7 +55,23 @@ h1 {
     padding-left: 100px;
     padding-right: 100px;
     padding-top: 24px;
+    background-image: url("../../../assets/img/green-shadow2.png"); 
+    background-position: bottom left; 
+    background-repeat: no-repeat; 
+    background-size: contain;
 }
+
+.background-shadow {
+    position: relative;
+    z-index: -1;
+    left: 0;
+    top: -210px; /* Negative Verschiebung nach oben */
+    height: calc(50vh - 100px); /* Dynamische Höhe basierend auf der Viewport-Höhe */
+    width: calc(30vw + 50px); /* Dynamische Breite basierend auf der Viewport-Breite */
+    max-height: 340px; /* Maximalhöhe für größere Bildschirme */
+    max-width: 400px; /* Maximalbreite für größere Bildschirme */
+}
+
 
 .project-container {
     position: relative;
@@ -63,6 +79,7 @@ h1 {
     border-radius: 15px;
     overflow: hidden;
     transition: transform 0.125s ease-in-out;
+    background-color: #141D2F;
 
     img {
         width: 100%;
@@ -70,7 +87,7 @@ h1 {
         object-fit: contain;
         transition: transform 0.125s ease-in-out, opacity 0.125s ease-in-out;
         transform: scale(1);
-        transform-origin: center // Vergrößerung startet von oben links
+        transform-origin: center 
     }
 
     .overlay {
@@ -187,41 +204,54 @@ p {
     align-items: center;
     padding-left: 100px;
     padding-top: 64px;
-    width: 100%; /* Container nimmt die volle Breite ein */
+    width: 100%; 
+
+    .testimonials-layout {
+        border-radius: 32px;
+        border: 4px solid #9747FF;
+        padding: 48px 96px;
+        width: 800px;
+        height: 272px;
+        margin-right: 48px;
+        color: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .testimonials-img-container {
+            display: flex;
+            align-items: center;
+            border-radius: 50%;
+            border: 4px solid #70E61C;
+        }
+        
+        .testimonials-img {
+            object-fit: cover;
+            height: 272px;
+            width: 272px;
+        }
+        
+        .custom-line-testimonial {
+            height: 2px;
+            background-color: #1CDAE6;
+            border: none;
+            width: 200px;
+        }
+    }
+    
+    .custom-line-testimonial-img {
+        height: 4px;
+        background-color: #70E61C;
+        border: none;
+        width: calc(100vw - 100px - 800px - 48px - 272px); 
+    }
+    
+    .testimonials-comment {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
 }
-
-.testimonials-layout {
-    border-radius: 32px;
-    border: 4px solid #9747FF;
-    padding: 48px 96px;
-    width: 800px;
-    height: 272px;
-    margin-right: 48px;
-}
-
-.testimonials-img-container {
-    display: flex;
-    align-items: center;
-    border-radius: 50%;
-    border: 4px solid #70E61C;
-}
-
-.testimonials-img {
-    object-fit: cover;
-    height: 272px;
-    width: 272px;
-}
-
-.custom-line-testimonial {
-    height: 4px;
-    background-color: #70E61C;
-    border: none;
-    width: calc(100vw - 100px - 800px - 48px - 272px); /* Berechnung der verbleibenden Breite */
-}
-
-
-
-
 
 
 @media only screen and (max-width: 1440px) {
