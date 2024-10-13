@@ -32,22 +32,24 @@ section {
     align-items: center;
     gap: 24px;
     padding-bottom: 24px;
+
+    h1 {
+        color: #FFFFFF;
+        font-size: 90px;
+        font-weight: 700;
+    }
+    
+    .custom-line {
+        width: 68px;
+        height: 4px;  
+        background-color: #9747FF;
+        border: none; 
+        border-top-right-radius: 4px;  
+        border-bottom-right-radius: 4px;  
+    }
 }
 
-h1 {
-    color: #FFFFFF;
-    font-size: 90px;
-    font-weight: 700;
-}
 
-.custom-line {
-    width: 68px;
-    height: 4px;  
-    background-color: #9747FF;
-    border: none; 
-    border-top-right-radius: 4px;  
-    border-bottom-right-radius: 4px;  
-}
 
 .portfolio-content-container {
     display: flex;
@@ -60,18 +62,6 @@ h1 {
     background-repeat: no-repeat; 
     background-size: contain;
 }
-
-.background-shadow {
-    position: relative;
-    z-index: -1;
-    left: 0;
-    top: -210px; /* Negative Verschiebung nach oben */
-    height: calc(50vh - 100px); /* Dynamische Höhe basierend auf der Viewport-Höhe */
-    width: calc(30vw + 50px); /* Dynamische Breite basierend auf der Viewport-Breite */
-    max-height: 340px; /* Maximalhöhe für größere Bildschirme */
-    max-width: 400px; /* Maximalbreite für größere Bildschirme */
-}
-
 
 .project-container {
     position: relative;
@@ -205,6 +195,8 @@ p {
     padding-left: 100px;
     padding-top: 64px;
     width: 100%; 
+    position: relative; 
+    z-index: 3; 
 
     .testimonials-layout {
         border-radius: 32px;
@@ -217,20 +209,34 @@ p {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        position: relative; 
+       
+            &::before {
+                content: '';
+                position: absolute;
+                top: -20px; 
+                left: -40px;
+                background-image: url("../../../assets/icons/quotation-mark.png");
+                background-size: 60px 40px;
+                background-repeat: no-repeat;
+                width: 60px;
+                height: 40px;
+                z-index: 2; 
+            }
 
         .testimonials-img-container {
             display: flex;
             align-items: center;
             border-radius: 50%;
             border: 4px solid #70E61C;
+            
+            .testimonials-img {
+                object-fit: cover;
+                height: 272px;
+                width: 272px;
+            }
         }
-        
-        .testimonials-img {
-            object-fit: cover;
-            height: 272px;
-            width: 272px;
-        }
-        
+
         .custom-line-testimonial {
             height: 2px;
             background-color: #1CDAE6;
@@ -258,6 +264,11 @@ p {
     img {
         height: 480px;
         width: 480px;
+    }
+
+    .testimonials-img {
+        height: 272px;
+        width: 272px;
     }
 }
 
