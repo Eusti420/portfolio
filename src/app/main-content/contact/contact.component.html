@@ -5,9 +5,7 @@
     </div>
     <div class="contact-container">
 
-        <hr class="custom-line-content">
-
-        <div class="jc-sb">
+       
             <div class="contact-info">
                 <h2>Got a problem to solve?</h2>
                 <p>Contact me through this form, I am interested in hearing from you, knowing your ideas and 
@@ -17,15 +15,18 @@
             </div>
     
             <div class="contact-form-container">
-                <mat-form-field>
+
+              <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+
+                <mat-form-field appearance="outline">
                     <mat-label>Your name</mat-label>
                     <input matInput
                             (blur)="updateErrorMessage()"
                             required>
                   </mat-form-field>
                   
-                  <div class="email-container">
-                    <mat-form-field>
+                 
+                    <mat-form-field appearance="outline">
                       <mat-label>Your email</mat-label>
                       <input matInput
                              placeholder="pat@example.com"
@@ -36,19 +37,30 @@
                         <mat-error>{{errorMessage}}</mat-error>
                       }
                     </mat-form-field>
-                  </div>
+            
                   
 
-                  <mat-form-field>
+                  <mat-form-field appearance="outline">
                     <mat-label>Your message</mat-label>
                     <textarea matInput
                                 (blur)="updateErrorMessage()"
                                 required>
                     </textarea>
                   </mat-form-field>
-                  
+
+                  <!-- Checkbox -->
+              <mat-checkbox   name="privacy" required>
+                I've read the <a href="#datenschutz">privacy policy</a> and agree to the processing of my data as outlined.
+              </mat-checkbox>
+          
+              <!-- Submit Button -->
+              <button mat-raised-button color="primary" [disabled]="!contactForm.form.valid || !contactData.privacy">
+                Send message :)
+              </button>
+
+                </form>
             </div>
-        </div>
+
         
     </div>
 </section>
