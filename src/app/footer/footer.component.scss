@@ -1,0 +1,80 @@
+section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1920px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 37px;
+    padding-bottom: 37px;
+    z-index: 1000;  
+    border-top: 2px solid #70e61c;
+   
+   
+    .legal-notice-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        >p {
+            color: #FFFFFF;
+            font-size: 36px;
+        }
+
+        >a {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+    }
+    
+}
+
+.reference-btn-container {
+    display: flex;
+    align-items: center;
+    padding-left: 42px;
+    gap: 48px;
+    height: 64px;
+}
+
+.github-btn,
+.mail-btn,
+.linkedIn-btn {
+    height: 30px;
+    width: 30px;
+    background-size: contain;  
+    background-repeat: no-repeat; 
+}
+
+.github-btn {
+    background-image: url(../../assets/icons/github-btn.png);
+}
+
+.mail-btn {
+    background-image: url(../../assets/icons/email-btn.png);
+}
+
+.linkedIn-btn {
+    background-image: url(../../assets/icons/linkedIn-btn.png);
+}
+
+.github-btn:hover {
+    background-image: url(/../../assets/icons/github-btn-hover.png);  
+    height: 40px;
+    width: 40px;
+    transition: 125ms ease-in-out;  
+}
+
+.mail-btn:hover {
+    background-image: url(../../assets/icons/mail-btn-hover.png); 
+    height: 40px;
+    width: 40px;
+    transition: 125ms ease-in-out;  
+}
+
+.linkedIn-btn:hover {
+    background-image: url(../../assets/icons/linkedIn-btn-hover.png);  
+    height: 40px;
+    width: 40px;
+    transition: 200ms ease-in-out;  
+}
