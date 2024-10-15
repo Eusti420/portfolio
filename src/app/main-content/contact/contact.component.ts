@@ -38,8 +38,8 @@ import {MatButtonModule} from '@angular/material/button';
 })
 
 export class ContactComponent {
-  http = inject(HttpClient)
-
+/*   http = inject(HttpClient)
+ */
    contactData = {
       name: "",
       email: "",
@@ -59,7 +59,11 @@ export class ContactComponent {
       },
     };
 
-   onSubmit(ngForm: NgForm) {
+    onSubmit() {
+      
+    }
+
+   /* onSubmit(ngForm: NgForm) {
     if (ngForm.valid) {
       fetch('https://api.web3forms.com/submit', {
         method: 'POST',
@@ -108,7 +112,7 @@ export class ContactComponent {
 
       ngForm.resetForm();
     }
-  }
+  } */
 
   readonly email = new FormControl('', [Validators.required, Validators.email]);
 
