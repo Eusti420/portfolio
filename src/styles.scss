@@ -5,6 +5,13 @@
   font-family: "Poppins";
 }
 
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #141D2F;
+  backdrop-filter: blur(65px);
+}
+
 .purple {
   color: #9747ff;
 }
