@@ -13,50 +13,58 @@
             </div>
     
             <div class="contact-form-container">
-              <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
-                
+              <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+            
                 <mat-form-field appearance="outline">
-                    <mat-label>Your name</mat-label>
-                    <input 
-                          matInput 
-                          [(ngModel)]="contactData.name" 
-                          name="name" 
-                          minlength="2"
-                          (blur)="updateErrorMessage()"
-                          required>
-                  </mat-form-field>
-                  <mat-form-field appearance="outline">
-                      <mat-label>Your email</mat-label>
-                      <input 
-                              matInput 
-                              [(ngModel)]="contactData.email" 
-                              name="email"
-                              placeholder="max.mustermann@example.com"
-                              [formControl]="email"
-                              (blur)="updateErrorMessage()"
-                              required>
-                              @if (email.invalid) {
-                        <mat-error>{{errorMessage()}}</mat-error>
-                      }
-                  </mat-form-field>
-                  <mat-form-field appearance="outline">
-                    <mat-label>Your message</mat-label>
-                    <textarea 
-                                [(ngModel)]="contactData.message" 
-                                name="message" 
-                                minlength="5"
-                                matInput
-                                (blur)="updateErrorMessage()"
-                                required>
-                    </textarea>
-                  </mat-form-field>
-                  <mat-checkbox name="privacy" required>
-                    I've read the <a href="#datenschutz">privacy policy</a> and agree to the processing of my data as outlined.
-                  </mat-checkbox>
-                  <button mat-raised-button color="primary" [disabled]="!contactForm.form.valid || !contactData.privacy">
-                    Send message :)
-                  </button>
-                </form>
+                  <mat-label>Your name</mat-label>
+                  <input [(ngModel)]="contactData.name" 
+                         matInput 
+                         name="name" 
+                         minlength="2"
+                         (blur)="updateErrorMessage()"
+                         required>
+                  <mat-error *ngIf="name.invalid && name.touched && !name.disabled">
+                        {{ errorMessage }}
+                  </mat-error>
+                </mat-form-field>
+            
+                <mat-form-field appearance="outline">
+                  <mat-label>Your email</mat-label>
+                  <input [(ngModel)]="contactData.email" 
+                         matInput 
+                         name="email"
+                         placeholder="max.mustermann@example.com"
+                         [formControl]="email"
+                         (blur)="updateErrorMessage()"
+                         required
+                         pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                  <mat-error *ngIf="email.invalid && email.touched && !email.disabled">
+                    {{ errorMessage }}
+                  </mat-error>
+                </mat-form-field>
+            
+                <mat-form-field appearance="outline">
+                  <mat-label>Your message</mat-label>
+                  <textarea [(ngModel)]="contactData.message" 
+                            name="message" 
+                            minlength="5"
+                            matInput
+                            (blur)="updateErrorMessage()"
+                            required>
+                  </textarea>
+                  <mat-error *ngIf="message.invalid && message.touched && !message.disabled">
+                    {{ errorMessage }}
+                  </mat-error>
+                </mat-form-field>
+            
+                <mat-checkbox name="privacy" required>
+                  I've read the <a href="#datenschutz">privacy policy</a> and agree to the processing of my data as outlined.
+                </mat-checkbox>
+                <button mat-raised-button color="primary">
+                  Send message :)
+                </button>
+              </form>
             </div>
+            
     </div>
 </section>

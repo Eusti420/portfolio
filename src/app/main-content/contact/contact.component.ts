@@ -59,8 +59,13 @@ export class ContactComponent {
       },
     };
 
-    onSubmit() {
-      
+    onSubmit(ngForm : NgForm) {
+      if (ngForm.valid && ngForm.submitted) {
+        console.log("läuft");
+      } else {
+        this.updateErrorMessage();
+      }
+
     }
 
    /* onSubmit(ngForm: NgForm) {
@@ -114,25 +119,39 @@ export class ContactComponent {
     }
   } */
 
-  readonly email = new FormControl('', [Validators.required, Validators.email]);
-
-  errorMessage = signal('');
-
-  constructor() {
-    merge(this.email.statusChanges, this.email.valueChanges)
-      .pipe(takeUntilDestroyed())
-      .subscribe(() => this.updateErrorMessage());
-  }
-
-  updateErrorMessage() {
-    if (this.email.hasError('required')) {
-      this.errorMessage.set('You must enter an email address');
-    } else if (this.email.hasError('email')) {
-      this.errorMessage.set('Not a valid email');
-    } else {
-      this.errorMessage.set('');
+    readonly email = new FormControl('', [Validators.required, Validators.email]);
+    readonly name = new FormControl('', [Validators.required, Validators.minLength(2)]);
+    readonly message = new FormControl('', [Validators.required, Validators.minLength(5)]);
+  
+    errorMessage = '';
+  
+    constructor() {
+      merge(
+        this.email.statusChanges,
+        this.name.statusChanges,
+        this.message.statusChanges
+      )
+        .pipe(takeUntilDestroyed())
+        .subscribe(() => this.updateErrorMessage());
     }
-  }
+  
+    updateErrorMessage() {
+      if (this.email.hasError('required')) {
+        this.errorMessage = 'You must enter an email address';
+      } else if (this.email.hasError('email')) {
+        this.errorMessage = 'Not a valid email';
+      } else if (this.name.hasError('required')) {
+        this.errorMessage = 'You must enter a name';
+      } else if (this.name.hasError('minlength')) {
+        this.errorMessage = 'Name must be at least 2 characters long';
+      } else if (this.message.hasError('required')) {
+        this.errorMessage = 'You must enter a message';
+      } else if (this.message.hasError('minlength')) {
+        this.errorMessage = 'Message must be at least 5 characters long';
+      } else {
+        this.errorMessage = '';
+      }
+    }
 
   private _bottomSheet = inject(MatBottomSheet);
   openBottomSheet(): void {
