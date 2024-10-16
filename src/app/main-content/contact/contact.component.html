@@ -4,32 +4,31 @@
         <hr class="custom-line">
     </div>
     <div class="contact-container">
-            <div class="contact-info">
-                <h2>Got a problem to solve?</h2>
-                <p>Contact me through this form, I am interested in hearing from you, knowing your ideas and 
-                    contributing to your projects with my work.           
-                </p><br>
-                <p>Need a Frontend Developer? <b>Contact me!</b></p>
-            </div>
+        <div class="contact-info">
+            <h2>Got a problem to solve?</h2>
+            <p>Contact me through this form, I am interested in hearing from you, knowing your ideas and 
+              contributing to your projects with my work.           
+            </p><br>
+            <p>Need a Frontend Developer? <b>Contact me!</b></p>
+        </div>
     
-            <div class="contact-form-container">
-              <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-            
-                <mat-form-field appearance="outline">
-                  <mat-label>Your name</mat-label>
+        <div class="contact-form-container">
+          <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+              <mat-form-field appearance="outline">
+              <mat-label>Your name</mat-label>
                   <input [(ngModel)]="contactData.name" 
                          matInput 
                          name="name" 
                          minlength="2"
                          (blur)="updateErrorMessage()"
                          required>
-                  <mat-error *ngIf="name.invalid && name.touched && !name.disabled">
+                <mat-error *ngIf="name.invalid && name.touched && !name.disabled">
                         {{ errorMessage }}
-                  </mat-error>
+                </mat-error>
                 </mat-form-field>
             
                 <mat-form-field appearance="outline">
-                  <mat-label>Your email</mat-label>
+                <mat-label>Your email</mat-label>
                   <input [(ngModel)]="contactData.email" 
                          matInput 
                          name="email"
@@ -38,13 +37,13 @@
                          (blur)="updateErrorMessage()"
                          required
                          pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
-                  <mat-error *ngIf="email.invalid && email.touched && !email.disabled">
+                <mat-error *ngIf="email.invalid && email.touched && !email.disabled">
                     {{ errorMessage }}
-                  </mat-error>
+                </mat-error>
                 </mat-form-field>
             
                 <mat-form-field appearance="outline">
-                  <mat-label>Your message</mat-label>
+                <mat-label>Your message</mat-label>
                   <textarea [(ngModel)]="contactData.message" 
                             name="message" 
                             minlength="5"
@@ -52,19 +51,18 @@
                             (blur)="updateErrorMessage()"
                             required>
                   </textarea>
-                  <mat-error *ngIf="message.invalid && message.touched && !message.disabled">
+                <mat-error *ngIf="message.invalid && message.touched && !message.disabled">
                     {{ errorMessage }}
-                  </mat-error>
+                </mat-error>
                 </mat-form-field>
             
-                <mat-checkbox name="privacy" required>
+                <mat-checkbox [(ngModel)]="contactData.privacy" name="privacy" required>
                   I've read the <a href="#datenschutz">privacy policy</a> and agree to the processing of my data as outlined.
                 </mat-checkbox>
-                <button mat-raised-button color="primary">
+                <button mat-raised-button color="primary" [disabled]="!contactForm.form.valid || !contactData.privacy">
                   Send message :)
                 </button>
               </form>
-            </div>
-            
+          </div>
     </div>
 </section>
