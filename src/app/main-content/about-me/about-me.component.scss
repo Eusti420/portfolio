@@ -17,11 +17,23 @@ section {
     padding-right: 100px;
     position: relative; 
   }
+
+  .about-me-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
   
   .img-container {
-   
-    position: relative; 
-    z-index: 2; 
+    position: relative;
+    width: 50%;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    >img {
+      height: 600px;
+      width: 600px;
+    }
   }
   
   .description-container {
@@ -90,5 +102,30 @@ section {
     cursor: pointer;
   }
   
+
+  // Media //
+
+@media (max-width: 1100px) {
+  .content-container {
+    flex-direction: column-reverse;
+    justify-content: center;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    .about-me-container {
+      width: 100%;
+    }
+
+    .img-container {
+      width: 100%;
+    }
+  }
+
+  h1 {
+    font-size: 70px;
+    text-align: center;
+  }
+}
+
   
 
