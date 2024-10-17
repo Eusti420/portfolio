@@ -87,7 +87,6 @@ section {
     font-weight: 700;
     font-size: 16px;
     gap: 12px;
-    width: 64px;
     position: relative; 
 }
 
@@ -192,6 +191,34 @@ h1 {
     border-top-left-radius: 4px;  
     border-bottom-left-radius: 4px;  
 }
+
+// Media //
+
+@media (max-width: 820px) {
+    section {
+        padding-left: 50px;
+        flex-direction: column-reverse;
+
+        .skills-container{
+            width: 100%;
+            justify-content: center;
+
+            .existing-skills {
+                justify-content: center;
+            }
+        }
+
+        .skills-description-container {
+            width: 100%;
+        }
+
+        .contact-btn-container {
+            justify-content: center;
+            padding-bottom: 50px;
+        }
+    }
+}
+
 
 
 
