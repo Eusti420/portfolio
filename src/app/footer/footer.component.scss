@@ -2,10 +2,9 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 32px;
     width: 100%;
     max-width: 1920px;
-    padding: 37px 32px 37px 32px;
+    padding: 37px 32px;
     z-index: 1000;
     border-top: 2px solid #70e61c;
 
@@ -17,6 +16,7 @@ section {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+        flex: 1;
 
         > p {
             color: #FFFFFF;
@@ -28,24 +28,44 @@ section {
             text-decoration: none;
         }
     }
-}
 
-.reference-btn-container {
-    display: flex;
-    align-items: center;
-    gap: 48px;
-    height: 64px;
+    // Füge eine Klasse für das mittlere div hinzu
+    .center-text {
+        margin: 0 auto;
+        text-align: center;
+        flex: 2;
+    }
 
-    a {
+    .reference-btn-container {
         display: flex;
-        justify-content: center;
+        flex: 1;
         align-items: center;
-        height: 30px;
-        width: 30px;
+        gap: 48px;
+        height: 64px;
+        
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            width: 30px;
 
-        img {
-            height: 100%;
-            width: 100%;
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                transition: transform 125ms ease-in-out;
+
+                &:hover {
+                    transform: scale(1.2);
+                    cursor: pointer;
+                }
+            }
+        }
+
+        > img {
+            height: 30px;
+            width: 30px;
             object-fit: cover;
             transition: transform 125ms ease-in-out;
 
@@ -53,18 +73,6 @@ section {
                 transform: scale(1.2);
                 cursor: pointer;
             }
-        }
-    }
-
-    > img {
-        height: 30px;
-        width: 30px;
-        object-fit: cover;
-        transition: transform 125ms ease-in-out;
-
-        &:hover {
-            transform: scale(1.2);
-            cursor: pointer;
         }
     }
 }
