@@ -111,7 +111,6 @@ export class ContactComponent {
   }
 
     readonly email = new FormControl('', [Validators.required, Validators.email]);
-    readonly name = new FormControl('', [Validators.required, Validators.minLength(2)]);
     readonly message = new FormControl('', [Validators.required, Validators.minLength(5)]);
   
     errorMessage = '';
@@ -119,7 +118,6 @@ export class ContactComponent {
     constructor() {
       merge(
         this.email.statusChanges,
-        this.name.statusChanges,
         this.message.statusChanges
       )
         .pipe(takeUntilDestroyed())
@@ -131,10 +129,6 @@ export class ContactComponent {
         this.errorMessage = 'You must enter an email address';
       } else if (this.email.hasError('email')) {
         this.errorMessage = 'Not a valid email';
-      } else if (this.name.hasError('required')) {
-        this.errorMessage = 'You must enter a name';
-      } else if (this.name.hasError('minlength')) {
-        this.errorMessage = 'Name must be at least 2 characters long';
       } else if (this.message.hasError('required')) {
         this.errorMessage = 'You must enter a message';
       } else if (this.message.hasError('minlength')) {

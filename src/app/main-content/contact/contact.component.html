@@ -21,11 +21,7 @@
                          matInput 
                          name="name" 
                          minlength="2"
-                         (blur)="updateErrorMessage()"
                          required>
-                <mat-error *ngIf="name.invalid && name.touched && !name.disabled">
-                        {{ errorMessage }}
-                </mat-error>
                 </mat-form-field>
             
                 <mat-form-field appearance="outline">
