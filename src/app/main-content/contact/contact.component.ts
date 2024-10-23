@@ -1,7 +1,7 @@
-import { Component, signal, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { FormControl, FormGroup, FormsModule, NgForm, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormControl, FormsModule, NgForm, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -38,8 +38,8 @@ import {MatButtonModule} from '@angular/material/button';
 })
 
 export class ContactComponent {
-/*   http = inject(HttpClient)
- */
+  http = inject(HttpClient)
+
    contactData = {
       name: "",
       email: "",
@@ -49,7 +49,7 @@ export class ContactComponent {
 
   mailTest = true;
     post = {
-      endPoint: 'https://florian-eusterholz.de/sendMail.php',
+      endPoint: 'https://feusterholz.de/sendMail.php',
       body: (payload: any) => JSON.stringify(payload),
       options: {
         headers: {
@@ -59,16 +59,8 @@ export class ContactComponent {
       },
     };
 
-    onSubmit(ngForm : NgForm) {
-      if (ngForm.valid && ngForm.submitted) {
-        console.log("läuft");
-      } else {
-        this.updateErrorMessage();
-      }
 
-    }
-
-   /* onSubmit(ngForm: NgForm) {
+   onSubmit(ngForm: NgForm) {
     if (ngForm.valid) {
       fetch('https://api.web3forms.com/submit', {
         method: 'POST',
@@ -107,7 +99,6 @@ export class ContactComponent {
             console.error(error);
           },
           complete: () => {
-             // Verwende explizit `this`
             console.info('send post complete');
           }
     
@@ -117,7 +108,7 @@ export class ContactComponent {
 
       ngForm.resetForm();
     }
-  } */
+  }
 
     readonly email = new FormControl('', [Validators.required, Validators.email]);
     readonly name = new FormControl('', [Validators.required, Validators.minLength(2)]);
