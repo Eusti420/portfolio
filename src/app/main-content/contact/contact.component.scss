@@ -111,18 +111,17 @@ section {
            
         }
          
-    }
+    }    
+}
 
     .btn-up {
         position: absolute;
         bottom: 5vh;
         right: 5vw;
-        transition: transform 0.3s ease;
+        transition: transform 125ms ease-in-out;
     }
     
     .btn-up:hover {
-        transform: scale(1.15);
+        transform: scale(1.2);
+        cursor: pointer;
     }
-    
-    
-}

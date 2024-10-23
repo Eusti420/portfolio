@@ -69,7 +69,7 @@ export class ContactComponent {
           'Accept': 'application/json'
         },
         body: JSON.stringify({
-          access_key: "03c721ac-766b-4756-9796-c62240ef5ed9",
+          access_key: "ac3726f5-9a6a-4de2-a318-940df3d95764",
           name: this.contactData.name,
           email: this.contactData.email,
           message: this.contactData.message,
