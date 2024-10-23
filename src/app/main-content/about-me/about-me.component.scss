@@ -27,12 +27,21 @@ section {
   .img-container {
     position: relative;
     width: 50%;
+    max-height: 90%;
     z-index: 2;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('../../../assets/img/hero-profil-background-shadows.png');
+
     >img {
-      height: 600px;
-      width: 600px;
+      max-height: 80vh;
+      height: auto;
+      width: auto;
     }
   }
   
