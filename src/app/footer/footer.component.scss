@@ -75,3 +75,10 @@ section {
         }
     }
 }
+
+@media (max-width: 790px) {
+    section {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

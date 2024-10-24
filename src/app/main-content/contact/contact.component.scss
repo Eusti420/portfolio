@@ -6,6 +6,7 @@ section {
     width: 100%;
     padding-bottom: 200px;
     max-width: 1920px;
+    padding-top: 100px;
 }
 
 .headline {
@@ -40,14 +41,11 @@ section {
 }
 
 
-
-
-
 .contact-container {
     display: flex;
     color: #FFFFFF;
     justify-content: space-between;
-    gap: 160px;
+    gap: 24px;
 
     .contact-info {
         display: flex;
@@ -124,4 +122,43 @@ section {
     .btn-up:hover {
         transform: scale(1.2);
         cursor: pointer;
+    }
+
+    @media (max-width: 1100px) {
+        .contact-container {
+            padding-left: 50px;
+            padding-right: 50px;
+            flex-direction: column;
+            align-items: center;
+
+            .contact-info {
+                padding: 0px;
+                max-width: 586px;
+                text-align: center;
+                align-items: center;            
+            }
+
+            .contact-form-container {
+                padding: 0px;
+                max-width: 100%;
+
+                >form {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+            }
+            
+        }
+    }
+}
+
+    @media (max-width: 790px) {
+
+        .headline {
+            h1 {
+                font-size: 50px;
+            }
+        }
+        
     }
