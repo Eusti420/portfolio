@@ -4,13 +4,14 @@ section {
     overflow: hidden;
     width: 100%;
     max-width: 1920px;
+    padding-top: 110px;
   }
 
   .bow-hero {
     position: absolute;
     width: 119%;
     height: 100%;
-    top: 51%;
+    top: 55%;
     z-index: -1;
 }
 
@@ -131,7 +132,7 @@ section {
 
 @media (max-width: 1100px) {
   .bow-hero {
-    top: 29%;
+    top: 32%;
     width: 130%;
   }
 
@@ -157,16 +158,11 @@ section {
   }
 }
 
-@media (max-width: 1020px) {
-  .bow-hero {
-    top: 28%;
-  }
-}
 
 @media (max-width: 790px) {
   .bow-hero {
-    top: 29%;
-    width: 135%;
+    top: 33%;
+    width: 145%;
   }
 
   h1 {
@@ -174,16 +170,19 @@ section {
   }
 }
 
-@media (max-width: 690px) {
-  .bow-hero {
-    top: 27%;
-  }
-}
 
 @media (max-width: 470px) {
   h1 {
     font-size: 32px;
   }
+
+  .content-container {
+    .about-me-container {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+  }
+ 
 }
 
   

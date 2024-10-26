@@ -1,17 +1,18 @@
 section {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    gap: 60px;
     width: 100%;
     max-width: 1920px;
-    padding-left: 100px;
     padding-bottom: 100px;
-    padding-top: 100px;
+    padding-top: 110px;
 }
 
 .skills-container {
     display: flex;
     flex-direction: column;
     width: 50%; 
+    padding-left: 100px;
 }
 
 .existing-skills {
@@ -23,7 +24,6 @@ section {
 
 .continually-learning {
     display: flex;
-    padding-top: 64px;
 }
 
 .skills-description-container {
@@ -31,7 +31,6 @@ section {
     flex-direction: column;
     justify-content: center;
     width: 50%; 
-    padding-left: 64px; 
 }
 
 .p-header{
@@ -174,7 +173,6 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 24px;
     padding-bottom: 24px;
 }
 
@@ -182,10 +180,12 @@ h1 {
     color: #FFFFFF;
     font-size: 90px;
     font-weight: 700;
+    padding-right: 24px;
 }
 
 .custom-line {
-    width: 287px;
+    display: flex;
+    flex: 1;
     height: 4px;  
     background-color: #1CDAE6;
     border: none; 
@@ -193,16 +193,29 @@ h1 {
     border-bottom-left-radius: 4px;  
 }
 
+
+
 // Media //
 
-@media (max-width: 820px) {
+@media (max-width: 1100px) {
     section {
-        padding-left: 50px;
         flex-direction: column-reverse;
+
+        .custom-line-hidden {
+            flex: 1; // Nimmt den Platz links ein
+            visibility: hidden; // Macht die Linie unsichtbar
+          }
+
+        .description-content {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
 
         .skills-container{
             width: 100%;
             justify-content: center;
+            padding-left: 50px;
+            padding-right: 50px;
 
             .existing-skills {
                 justify-content: center;
@@ -224,6 +237,27 @@ h1 {
     h1 {
         font-size: 50px;
     }
+}
+
+@media (max-width: 470px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    section {
+        .skills-container{
+            width: 100%;
+            justify-content: center;
+            padding-left: 20px;
+            padding-right: 20px;
+        }    
+    
+        .description-content {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+  
 }
 
 
