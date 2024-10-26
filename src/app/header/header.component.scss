@@ -1,37 +1,81 @@
+// src/app/header/header.component.scss
 section {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1920px;
-    padding-left: 100px;
-    padding-right: 100px;
-    padding-top: 37px;
-    padding-bottom: 37px;
-    position: fixed !important;  
-    top: 0;  
-    left: 0;  
-    z-index: 1000;  
-    >p {
+    padding: 37px 100px;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    > p {
         color: #FFFFFF;
         font-size: 24px;
         font-weight: bold;
     }
-    >p:hover {
-        cursor: pointer;
-    }
-    >div {
+
+    .menu {
         display: flex;
         gap: 29px;
-        >a{
+
+        > a {
             color: #FFFFFF;
             text-decoration: none;
             font-size: 18px;
         }
-        >a:hover {
+
+        > a:hover {
             cursor: pointer;
             color: #70e61c;
             transition: 100ms ease-in;
         }
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .menu-icon {
+        display: none;
+        font-size: 28px;
+        cursor: pointer;
+        color: #FFFFFF;
+    }
+
+    @media (max-width: 790px) {
+        
+        .menu {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #333; // Adjust as needed
+            width: 100%;
+            padding: 10px 0;
+        }
+
+        .menu-toggle:checked + .menu-icon + .menu {
+            display: flex;
+            align-items: center;
+        }
+
+        .menu-icon {
+            display: block;
+        }
+    }
+}
+
+@media (max-width: 790px) {
+    section {
+        padding: 37px 50px;
+    }
+}
+
+@media (max-width: 470px) {
+    section {
+        padding: 37px 20px;
     }
 }

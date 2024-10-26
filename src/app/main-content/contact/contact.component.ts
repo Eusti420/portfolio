@@ -1,4 +1,5 @@
 import { Component, inject } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormControl, FormsModule, NgForm, ReactiveFormsModule, Validators } from '@angular/forms';
@@ -31,6 +32,7 @@ import {MatButtonModule} from '@angular/material/button';
         MatInputModule, 
         FormsModule, 
         ReactiveFormsModule,
+        RouterModule
       ],
 
   templateUrl: './contact.component.html',

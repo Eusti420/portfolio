@@ -4,6 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./header/header.component";
 import { FooterComponent } from "./footer/footer.component";
 import { MainContentComponent } from './main-content/main-content.component';
+import { appConfig } from './app.config';
 
 @Component({
   selector: 'app-root',
