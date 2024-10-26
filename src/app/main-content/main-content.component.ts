@@ -4,6 +4,8 @@ import { ContactComponent } from './contact/contact.component';
 import { HeroComponent } from './hero/hero.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { SkillsComponent } from './skills/skills.component';
+import { RouterModule } from '@angular/router';
+import { ImprintComponent } from '../imprint/imprint.component';
 
 @Component({
   selector: 'app-main-content',
@@ -13,7 +15,9 @@ import { SkillsComponent } from './skills/skills.component';
     ContactComponent, 
     HeroComponent, 
     PortfolioComponent, 
-    SkillsComponent
+    SkillsComponent,
+    RouterModule,
+    ImprintComponent
   ],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss'
