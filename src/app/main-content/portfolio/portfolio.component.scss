@@ -42,7 +42,7 @@ section {
     
     .custom-line {
         display: flex;
-        flex: 1;
+        width: 76px;
         height: 4px;  
         background-color: #9747FF;
         border: none; 
@@ -277,6 +277,12 @@ p {
     text-align: center;
     padding-left: 50px;
     padding-right: 50px;
+  }
+
+  .headline {
+    .custom-line {
+        flex: 1;
+    }
   }
 }
 
