@@ -160,7 +160,7 @@ h1 {
     }
 
     .img-container {
-      width: auto;
+      width: 100%;
     }
   }
 
@@ -181,9 +181,16 @@ h1 {
   }
 }
 
-@media (max-width: 612px) {
+@media (max-width: 720px) {
   .bow-hero {
     top: 32%;
+    width: 160%;
+  }
+}
+
+@media (max-width: 612px) {
+  .bow-hero {
+    top: 31%;
     width: 160%;
   }
 
@@ -192,67 +199,81 @@ h1 {
   }
 }
 
-@media (max-width: 560px) {
-  .bow-hero {
-    top: 31%;
-    width: 160%;
-  }
-}
-
-@media (max-width: 500px) {
+@media (max-width: 570px) {
   .bow-hero {
     top: 30%;
     width: 160%;
   }
 }
 
-@media (max-width: 470px) {
- 
-
-  h1 {
-    font-size: 32px;
-  }
-}
-
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .bow-hero {
     top: 29%;
     width: 160%;
   }
 }
 
-@media (max-width: 420px) {
-  .bow-hero {
-    top: 28%;
-    width: 160%;
+@media (max-width: 470px) {
+  .description-container {
+    flex-direction: column;
+    align-items: center;
   }
-}
 
-
-@media (max-width: 400px) {
-  .bow-hero {
-    top: 26%;
-    width: 160%;
+  h1 {
+    font-size: 32px;
   }
-}
 
-@media (max-width: 380px) {
-  .bow-hero {
-    top: 24%;
-    width: 170%;
-  }
-}
-
-@media (max-width: 350px) {
   .bow-hero {
     top: 23%;
     width: 160%;
   }
 }
 
-@media (max-width: 330px) {
+@media (max-width: 440px) {
   .bow-hero {
     top: 22%;
+    width: 160%;
+  }
+}
+
+@media (max-width: 420px) {
+  .bow-hero {
+    top: 21%;
+    width: 160%;
+  }
+}
+
+@media (max-width: 410px) {
+  .bow-hero {
+    top: 20%;
+    width: 160%;
+  }
+}
+
+@media (max-width: 400px) {
+  .bow-hero {
+    top: 18%;
+    width: 160%;
+  }
+}
+
+@media (max-width: 370px) {
+  .bow-hero {
+    top: 17%;
+    width: 160%;
+  }
+}
+
+@media (max-width: 350px) {
+  .bow-hero {
+    top: 16%;
+    width: 160%;
+  }
+}
+
+@media (max-width: 330px) {
+  .bow-hero {
+    top: 15%;
     width: 160%;
   }
 }
