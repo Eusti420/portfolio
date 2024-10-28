@@ -3,25 +3,36 @@ section {
     color: white;
     margin-top: 110px;
     position: relative;
-    max-width: 1440px;
+    max-width: 1920px;
 }
 
 .headline {
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
-
-    >h1 {
-        text-align: end;
-        padding-left: 30px;
+    align-items: center;
+    gap: 24px;
+    padding-bottom: 24px;
+  
+    h1 {
+      color: #ffffff;
+      font-size: 90px;
+      font-weight: 700;
     }
-
-    >div {
-        width: 10vw;
-        height: 4px;
-        background-color: #141D2F;
+  
+    .custom-line {
+      display: flex;
+      width: 76px;
+      height: 4px;
+      background-color: #9747ff;
+      border: none;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
     }
-}
+  
+    .custom-line-hidden {
+      flex: 1;
+      visibility: hidden;
+    }
+  }
 
 .imprint {
     display: flex;
@@ -40,11 +51,16 @@ section {
     h3 {
         margin-top: 30px;
     }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
 }
 
 .link-back {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
     padding-left: 100px;
     padding-right: 100px;
@@ -53,6 +69,11 @@ section {
     .icon-back {
         rotate: 180deg;
         margin-right: 8px;
+    }
+
+    span {
+        color: white;
+        text-decoration: none;
     }
 }
 
