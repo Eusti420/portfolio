@@ -93,8 +93,8 @@ h1 {
   width: 84px;
   height: 84px;
   padding-right: 32px;
-  transition: transform 125ms ease-in-out; /* Animationsdauer und Timing-Funktion */
-  transform-origin: top; /* Skalierung von oben nach unten */
+  transition: transform 125ms ease-in-out;
+  transform-origin: top;
 }
 
 .loaction-img:hover {
@@ -109,15 +109,14 @@ h1 {
   width: 84px;
   height: 84px;
   padding-right: 32px;
-  transition: transform 125ms ease-in-out; 
-  transform-origin: top; 
+  transition: transform 125ms ease-in-out;
+  transform-origin: top;
 }
 
 .idea-img:hover {
   transform: scale(1.5);
   cursor: pointer;
 }
-
 
 .puzzle-img {
   background-image: url("../../../assets/icons/puzzle.png");
@@ -126,8 +125,8 @@ h1 {
   width: 84px;
   height: 84px;
   padding-right: 32px;
-  transition: transform 125ms ease-in-out; 
-  transform-origin: top; 
+  transition: transform 125ms ease-in-out;
+  transform-origin: top;
 }
 
 .puzzle-img:hover {
@@ -140,7 +139,7 @@ h1 {
 @media (max-width: 1100px) {
   .bow-hero {
     top: 32%;
-    width: 130%;
+    width: 140%;
   }
 
   .content-container {
@@ -149,9 +148,11 @@ h1 {
     height: auto;
 
     .about-me-container {
-      width: 100%;
+      width: auto;
+      text-align: center;
       padding-top: 100px;
       padding-right: 50px;
+      padding-left: 50px;
     }
 
     .description-container {
@@ -159,7 +160,7 @@ h1 {
     }
 
     .img-container {
-      width: 100%;
+      width: auto;
     }
   }
 
@@ -180,15 +181,78 @@ h1 {
   }
 }
 
+@media (max-width: 612px) {
+  .bow-hero {
+    top: 32%;
+    width: 160%;
+  }
+
+  .img-container {
+    padding: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .bow-hero {
+    top: 31%;
+    width: 160%;
+  }
+}
+
+@media (max-width: 500px) {
+  .bow-hero {
+    top: 30%;
+    width: 160%;
+  }
+}
+
 @media (max-width: 470px) {
+ 
+
   h1 {
     font-size: 32px;
   }
+}
 
-  .content-container {
-    .about-me-container {
-      padding-right: 20px;
-      padding-left: 20px;
-    }
+@media (max-width: 450px) {
+  .bow-hero {
+    top: 29%;
+    width: 160%;
+  }
+}
+
+@media (max-width: 420px) {
+  .bow-hero {
+    top: 28%;
+    width: 160%;
+  }
+}
+
+
+@media (max-width: 400px) {
+  .bow-hero {
+    top: 26%;
+    width: 160%;
+  }
+}
+
+@media (max-width: 380px) {
+  .bow-hero {
+    top: 24%;
+    width: 170%;
+  }
+}
+
+@media (max-width: 350px) {
+  .bow-hero {
+    top: 23%;
+    width: 160%;
+  }
+}
+
+@media (max-width: 330px) {
+  .bow-hero {
+    top: 22%;
+    width: 160%;
   }
 }

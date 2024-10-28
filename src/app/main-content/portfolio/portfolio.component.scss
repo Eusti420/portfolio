@@ -1,277 +1,276 @@
 section {
-    position: relative; 
-    width: 100%;
-    z-index: 1; 
-    max-width: 1920px;
-    padding-top: 100px;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  max-width: 1920px;
+  padding-top: 120px;
 }
 
 .project-intro-container {
-    padding-left: 100px;
+  padding-left: 100px;
 }
 
 .background {
-    background-color: #141D2F; 
-    backdrop-filter: blur(65px); 
-    
-    &::before {
-        content: '';
-        position: absolute;
-        top: -150px; 
-        right: 0;
-        width: 100%;
-        height: calc(100% + 250px); 
-        background-image: url(../../../assets/img/blue-shadow1.png);
-        background-position: calc(100% + 40px) top;
-        background-repeat: no-repeat;
-        z-index: -1; 
-    }
+  background-color: #141d2f;
+  backdrop-filter: blur(65px);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    right: 0;
+    width: 100%;
+    height: calc(100% + 250px);
+    background-image: url(../../../assets/img/blue-shadow1.png);
+    background-position: calc(100% + 40px) top;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
 }
 
 .headline {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-bottom: 24px;
+
+  h1 {
+    color: #ffffff;
+    font-size: 90px;
+    font-weight: 700;
+  }
+
+  .custom-line {
     display: flex;
-    align-items: center;
-    gap: 24px;
-    padding-bottom: 24px;
+    width: 76px;
+    height: 4px;
+    background-color: #9747ff;
+    border: none;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
 
-    h1 {
-        color: #FFFFFF;
-        font-size: 90px;
-        font-weight: 700;
-    }
-    
-    .custom-line {
-        display: flex;
-        width: 76px;
-        height: 4px;  
-        background-color: #9747FF;
-        border: none; 
-        border-top-right-radius: 4px;  
-        border-bottom-right-radius: 4px;  
-    }
-
-    .custom-line-hidden {
-        flex: 1; // Nimmt den Platz links ein
-        visibility: hidden; // Macht die Linie unsichtbar
-    }
+  .custom-line-hidden {
+    flex: 1;
+    visibility: hidden;
+  }
 }
 
-
-
 .portfolio-content-container {
-    display: flex;
-    gap: 48px;
-    padding-left: 100px;
-    padding-right: 100px;
-    padding-top: 24px;
-    background-image: url("../../../assets/img/green-shadow2.png"); 
-    background-position: bottom left; 
-    background-repeat: no-repeat; 
-    background-size: contain;
+  display: flex;
+  gap: 48px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 24px;
+  background-image: url("../../../assets/img/green-shadow2.png");
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .project-container {
-    position: relative;
-    border: 2px solid #70E61C;
-    border-radius: 15px;
-    overflow: hidden;
-    transition: transform 0.125s ease-in-out;
-    background-color: #141D2F;
+  position: relative;
+  border: 2px solid #70e61c;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.125s ease-in-out;
+  background-color: #141d2f;
 
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.125s ease-in-out, opacity 0.125s ease-in-out;
+    transform: scale(1);
+    transform-origin: center;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.125s ease-in-out;
+
+    .overlay-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      padding-top: 64px;
+    }
+
+    .button-git {
+      background-color: transparent;
+      padding: 15px 30px;
+      border-radius: 10px;
+      border: 1px solid #1cdae6;
+      font-weight: 400;
+      font-size: 23px;
+      color: white;
+      text-decoration: none;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: #1cdae6;
+      }
+    }
+
+    .button-test {
+      background-color: #9747ff;
+      padding: 15px 30px;
+      border-radius: 10px;
+      font-weight: 400;
+      font-size: 23px;
+      color: white;
+      text-decoration: none;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: #56b719;
+      }
+    }
+
+    .description {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      background-color: white;
+      width: 100%;
+      height: 350px;
+      border-radius: 30px 30px 0px 0px;
+
+      h3 {
+        margin: 0;
+        font-weight: 700;
+        font-size: 32px;
+        color: #9747ff;
+      }
+
+      p {
+        margin: 0;
+        color: black;
+        text-align: center;
+        text-wrap: wrap;
+        font-size: 23px;
+        font-weight: 400;
+        padding: 24px 48px 24px 48px;
+      }
+
+      div {
+        color: #70e61c;
+        font-size: 23px;
+        font-weight: 400;
+      }
+    }
+  }
+
+  &:hover {
     img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        transition: transform 0.125s ease-in-out, opacity 0.125s ease-in-out;
-        transform: scale(1);
-        transform-origin: center 
+      transform: scale(1.8);
+      opacity: 0.8;
     }
 
     .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.6); 
-        opacity: 0;
-        z-index: 1;
-        transition: opacity 0.125s ease-in-out;
-
-        .overlay-content {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 100%;
-        }
-
-        .buttons {
-            display: flex;
-            justify-content: center;
-            gap: 48px;
-            padding-top: 64px;
-        }
-
-        .button-git {
-            background-color: transparent;
-            padding: 15px 30px;
-            border-radius: 10px;
-            border: 1px solid #1CDAE6;
-            font-weight: 400;
-            font-size: 23px;
-            color: white;
-            text-decoration: none;
-            transition: background-color 0.2s ease;
-
-            &:hover {
-                background-color: #1CDAE6;
-            }
-        }
-
-        .button-test {
-            background-color: #9747FF;
-            padding: 15px 30px;
-            border-radius: 10px;
-            font-weight: 400;
-            font-size: 23px;
-            color: white;
-            text-decoration: none;
-            transition: background-color 0.2s ease;
-
-            &:hover {
-                background-color: #56b719;
-            }
-        }
-
-        .description {
-            text-align: center;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            justify-content: center;
-            background-color: white;
-            width: 100%;
-            height: 350px;
-            border-radius: 30px 30px 0px 0px;
-
-            h3 {
-                margin: 0;
-                
-                font-weight: 700;
-                font-size: 32px;
-                color: #9747FF;
-            }
-
-            p {
-                margin: 0;
-                color: black;
-                text-align: center;
-                text-wrap: wrap;
-                font-size: 23px;
-                font-weight: 400;
-                padding: 24px 48px 24px 48px;
-            }
-
-            div {
-                color: #70E61C;
-                font-size: 23px;
-                font-weight: 400;
-            }
-        }
+      opacity: 1;
     }
-
-    &:hover {
-        img {
-            transform: scale(1.8); 
-            opacity: 0.8; 
-        }
-
-        .overlay {
-            opacity: 1; 
-        }
-    }
+  }
 }
 
 p {
-    color: #FFFFFF;
+  color: #ffffff;
 }
 
 .testimonials-container {
+  display: flex;
+  align-items: center;
+  padding-left: 100px;
+  padding-top: 64px;
+  width: 100%;
+  position: relative;
+  z-index: 3;
+
+  .testimonials-layout {
+    border-radius: 32px;
+    border: 4px solid #9747ff;
+    padding: 48px 96px;
+    width: 800px;
+    height: 272px;
+    margin-right: 48px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -20px;
+      left: -40px;
+      background-image: url("../../../assets/icons/quotation-mark.png");
+      background-size: 60px 40px;
+      background-repeat: no-repeat;
+      width: 60px;
+      height: 40px;
+      z-index: 2;
+    }
+
+    .testimonials-img-container {
+      display: flex;
+      align-items: center;
+      border-radius: 50%;
+      border: 4px solid #70e61c;
+
+      .testimonials-img {
+        object-fit: cover;
+        height: 272px;
+        width: 272px;
+      }
+    }
+
+    .custom-line-testimonial {
+      height: 2px;
+      background-color: #1cdae6;
+      border: none;
+      width: 200px;
+    }
+  }
+
+  .custom-line-testimonial-img {
+    height: 4px;
+    background-color: #70e61c;
+    border: none;
+    width: calc(100vw - 100px - 800px - 48px - 272px);
+  }
+
+  .testimonials-comment {
     display: flex;
     align-items: center;
-    padding-left: 100px;
-    padding-top: 64px;
-    width: 100%; 
-    position: relative; 
-    z-index: 3; 
-
-    .testimonials-layout {
-        border-radius: 32px;
-        border: 4px solid #9747FF;
-        padding: 48px 96px;
-        width: 800px;
-        height: 272px;
-        margin-right: 48px;
-        color: #FFFFFF;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        position: relative; 
-       
-            &::before {
-                content: '';
-                position: absolute;
-                top: -20px; 
-                left: -40px;
-                background-image: url("../../../assets/icons/quotation-mark.png");
-                background-size: 60px 40px;
-                background-repeat: no-repeat;
-                width: 60px;
-                height: 40px;
-                z-index: 2; 
-            }
-
-        .testimonials-img-container {
-            display: flex;
-            align-items: center;
-            border-radius: 50%;
-            border: 4px solid #70E61C;
-            
-            .testimonials-img {
-                object-fit: cover;
-                height: 272px;
-                width: 272px;
-            }
-        }
-
-        .custom-line-testimonial {
-            height: 2px;
-            background-color: #1CDAE6;
-            border: none;
-            width: 200px;
-        }
-    }
-    
-    .custom-line-testimonial-img {
-        height: 4px;
-        background-color: #70E61C;
-        border: none;
-        width: calc(100vw - 100px - 800px - 48px - 272px); 
-    }
-    
-    .testimonials-comment {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-    }
+    gap: 12px;
+  }
 }
 
+// media //
+
 @media (max-width: 1100px) {
-    .portfolio-content-container {
-        flex-direction: column;
-        padding-left: 50px;
-        padding-right: 50px;
-    }
+  .portfolio-content-container {
+    flex-direction: column;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 
   .project-intro-container {
     text-align: center;
@@ -281,28 +280,93 @@ p {
 
   .headline {
     .custom-line {
-        flex: 1;
+      flex: 1;
+    }
+  }
+
+  .project-container {
+    .overlay {
+      .description {
+        h3 {
+          font-size: 24px;
+        }
+
+        p {
+          font-size: 20px;
+          padding: 12px 24px 12px 24px;
+        }
+
+        div {
+          font-size: 20px;
+        }
+      }
     }
   }
 }
 
 @media (max-width: 790px) {
-
-    .headline {
-        h1 {
-            font-size: 50px;
-        }
+  .headline {
+    h1 {
+      font-size: 50px;
     }
+  }
+  .project-container {
+    .overlay {
+      .description {
+        height: 220px;
+        h3 {
+          font-size: 20px;
+        }
+
+        p {
+          font-size: 16px;
+          padding: 12px 24px 12px 24px;
+        }
+
+        div {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .button-git {
+      padding: 12px 24px;
+      font-size: 20px;
+    }
+
+    .button-test {
+      font-size: 20px;
+      padding: 12px 24px;
+    }
+  }
 }
 
 @media (max-width: 470px) {
-    .headline {
-        h1 {
-            font-size: 32px;
-        }
+  .headline {
+    h1 {
+      font-size: 32px;
     }
-}
+  }
 
+  .project-container {
+    .overlay {
+      .buttons {
+        gap: 12px;
+        padding-top: 12px;
+      }
+
+      .button-git {
+        padding: 6px 12px;
+        font-size: 20px;
+      }
+
+      .button-test {
+        font-size: 20px;
+        padding: 6px 12px;
+      }
+    }
+  }
+}
 
 /* @media only screen and (max-width: 1440px) {
     img {
