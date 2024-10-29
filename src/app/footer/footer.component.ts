@@ -1,14 +1,26 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { TranslateService, TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, TranslateModule],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
+  currentLanguage = 'en';
 
+  constructor(private translate: TranslateService) {
+    this.translate.setDefaultLang(this.currentLanguage);
+  }
+
+  switchLanguage(language: string) {
+    this.currentLanguage = language;
+    this.translate.use(language);
+  }
 }
+
+
