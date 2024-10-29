@@ -32,7 +32,7 @@ import {MatButtonModule} from '@angular/material/button';
         MatInputModule, 
         FormsModule, 
         ReactiveFormsModule,
-        RouterModule
+        RouterModule,
       ],
 
   templateUrl: './contact.component.html',
@@ -114,8 +114,8 @@ export class ContactComponent {
 
       console.log('Form Submitted!', this.contactData);
       this.openBottomSheet();
-      ngForm.resetForm(); // Reset Form after submission
-      this.contactData = { privacy: false, name: '', email: '', message: '' }; // Reset data values
+      ngForm.resetForm();
+      this.contactData = { privacy: false, name: '', email: '', message: '' }; 
     }
   }
 

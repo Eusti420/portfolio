@@ -41,7 +41,7 @@
         
             
             <mat-checkbox [(ngModel)]="contactData.privacy" name="privacy" required>
-              I've read the <a href="#datenschutz">privacy policy</a> and agree to the processing of my data as outlined.
+              I've read the <a routerLink="privacy-policy">privacy policy</a> and agree to the processing of my data as outlined.
             </mat-checkbox>
             <mat-error *ngIf="checkboxErrorMessage">{{ checkboxErrorMessage }}</mat-error>
             
