@@ -15,54 +15,46 @@
     
         <div class="contact-form-container">
           <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-            <input type="hidden" name="access_key" value="ac3726f5-9a6a-4de2-a318-940df3d95764">
-
-              <mat-form-field appearance="outline">
+            
+            <mat-form-field appearance="outline">
               <mat-label>Your name</mat-label>
-                  <input [(ngModel)]="contactData.name" 
-                         matInput 
-                         name="name" 
-                         minlength="2"
-                         required>
-                </mat-form-field>
+              <input matInput [formControl]="name" placeholder="Enter your name" />
+              <mat-error *ngIf="name.hasError('required')">Name is required</mat-error>
+              <mat-error *ngIf="name.hasError('minlength')">Name must be at least 2 characters long</mat-error>
+            </mat-form-field>
+        
             
-                <mat-form-field appearance="outline">
-                <mat-label>Your email</mat-label>
-                  <input [(ngModel)]="contactData.email" 
-                         matInput 
-                         name="email"
-                         placeholder="max.mustermann@example.com"
-                         [formControl]="email"
-                         (blur)="updateErrorMessage()"
-                         required
-                         pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
-                <mat-error *ngIf="email.invalid && email.touched && !email.disabled">
-                    {{ errorMessage }}
-                </mat-error>
-                </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Your email</mat-label>
+              <input matInput [formControl]="email" placeholder="max.mustermann@example.com" />
+              <mat-error *ngIf="email.hasError('required')">Email is required</mat-error>
+              <mat-error *ngIf="email.hasError('email')">Not a valid email</mat-error>
+            </mat-form-field>
+        
+           
+            <mat-form-field appearance="outline">
+              <mat-label>Your message</mat-label>
+              <textarea matInput [formControl]="message" placeholder="Enter your message"></textarea>
+              <mat-error *ngIf="message.hasError('required')">Message is required</mat-error>
+              <mat-error *ngIf="message.hasError('minlength')">Message must be at least 5 characters long</mat-error>
+            </mat-form-field>
+        
             
-                <mat-form-field appearance="outline">
-                <mat-label>Your message</mat-label>
-                  <textarea [(ngModel)]="contactData.message" 
-                            name="message" 
-                            minlength="5"
-                            matInput
-                            (blur)="updateErrorMessage()"
-                            required>
-                  </textarea>
-                <mat-error *ngIf="message.invalid && message.touched && !message.disabled">
-                    {{ errorMessage }}
-                </mat-error>
-                </mat-form-field>
+            <mat-checkbox [(ngModel)]="contactData.privacy" name="privacy" required>
+              I've read the <a href="#datenschutz">privacy policy</a> and agree to the processing of my data as outlined.
+            </mat-checkbox>
+            <mat-error *ngIf="checkboxErrorMessage">{{ checkboxErrorMessage }}</mat-error>
             
-                <mat-checkbox [(ngModel)]="contactData.privacy" name="privacy" required>
-                  I've read the <a href="#datenschutz">privacy policy</a> and agree to the processing of my data as outlined.
-                </mat-checkbox>
-                <button mat-raised-button color="primary" [disabled]="!contactForm.form.valid || !contactData.privacy">
-                  Send message :)
-                </button>
-              </form>
-          </div>
+            
+              <button mat-raised-button color="primary" 
+                [disabled]="!name.valid || !email.valid || !message.valid || !contactData.privacy"
+                (click)="checkPrivacyPolicy()">
+                Send message 
+              </button>
+          </form>
+        </div>
+        
+        
     </div>
     
     <a class="btn-up" href="#hero">
