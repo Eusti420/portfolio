@@ -1,11 +1,15 @@
 <section class="background-color">
     <p>Florian</p>
     <input type="checkbox" id="menu-toggle" class="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <label for="menu-toggle" class="menu-icon">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+    </label>
     <div class="menu">
-        <a href="#aboutMe">About Me</a>
-        <a href="#skills">Skills</a>
-        <a href="#portfolio">Portfolio</a>
+        <a href="#aboutMe" (click)="closeMenu()">About Me</a>
+        <a href="#skills" (click)="closeMenu()">Skills</a>
+        <a href="#portfolio" (click)="closeMenu()">Portfolio</a>
     </div>
 </section>
 

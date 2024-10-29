@@ -9,6 +9,12 @@ import { RouterModule } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
+// In deiner Component-Klasse:
 export class HeaderComponent {
-
+  closeMenu() {
+    const checkbox = document.getElementById('menu-toggle') as HTMLInputElement;
+    if (checkbox) {
+      checkbox.checked = false;
+    }
+  }
 }
