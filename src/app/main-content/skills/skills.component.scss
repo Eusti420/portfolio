@@ -151,7 +151,6 @@ section {
 .description-content {
   padding-right: 100px;
   > p {
-    font-size: 20px;
     color: #ffffff;
     padding-top: 12px;
   }
@@ -245,13 +244,6 @@ h1 {
 }
 
 @media (max-width: 790px) {
-  section {
-    .description-content {
-      > p {
-        font-size: 16px;
-      }
-    }
-  }
 
   h1 {
     font-size: 50px;
