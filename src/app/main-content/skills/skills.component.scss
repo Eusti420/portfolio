@@ -35,7 +35,7 @@ section {
 
 .p-header {
   color: #ffffff;
-  font-size: 32px;
+  font-size: 32px !important;
   font-weight: 700;
   padding-top: 32px !important;
 }
@@ -151,6 +151,7 @@ section {
 .description-content {
   padding-right: 100px;
   > p {
+    font-size: 20px;
     color: #ffffff;
     padding-top: 12px;
   }
@@ -205,8 +206,8 @@ h1 {
     flex-direction: column-reverse;
 
     .custom-line-hidden {
-      flex: 1; // Nimmt den Platz links ein
-      visibility: hidden; // Macht die Linie unsichtbar
+      flex: 1;
+      visibility: hidden;
     }
 
     .headline {
@@ -244,6 +245,14 @@ h1 {
 }
 
 @media (max-width: 790px) {
+  section {
+    .description-content {
+      > p {
+        font-size: 16px;
+      }
+    }
+  }
+
   h1 {
     font-size: 50px;
   }

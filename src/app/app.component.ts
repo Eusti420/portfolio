@@ -8,6 +8,7 @@ import { MainContentComponent } from './main-content/main-content.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -22,6 +23,7 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
     ImprintComponent,
     PrivacyPolicyComponent,
     HttpClientModule,
+    TranslateModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

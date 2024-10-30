@@ -16,6 +16,7 @@ import {
 } from '@angular/material/bottom-sheet';
 import {MatListModule} from '@angular/material/list';
 import {MatButtonModule} from '@angular/material/button';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @Component({
@@ -33,6 +34,7 @@ import {MatButtonModule} from '@angular/material/button';
         FormsModule, 
         ReactiveFormsModule,
         RouterModule,
+        TranslateModule
       ],
 
   templateUrl: './contact.component.html',

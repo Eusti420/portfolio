@@ -11,11 +11,14 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-  currentLanguage = 'en';
+  currentLanguage = 'de';
 
   constructor(private translate: TranslateService) {
-    this.translate.setDefaultLang(this.currentLanguage);
+ 
+    this.translate.setDefaultLang('de');
+    this.translate.use('de'); 
   }
+  
 
   switchLanguage(language: string) {
     this.currentLanguage = language;

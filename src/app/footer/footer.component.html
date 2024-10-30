@@ -1,10 +1,10 @@
 <section class="background-color">
     <div class="legal-notice-container">
-      <p>{{ 'footer.legalNotice' | translate }}</p>
-      <a routerLink="/imprint">{{ 'footer.legalNotice' | translate }}</a>
+      <p>Florian</p>
+      <a routerLink="/imprint">{{ 'FOOTER.IMPRINT' | translate }}</a>
     </div>
   
-    <div class="center-text">{{ 'footer.copyright' | translate }}</div>
+    <div class="center-text">© Florian Eusterholz 2024</div>
   
     <div class="reference-btn-container">
       <a class="github-btn" href="https://github.com/Eusti420">
@@ -17,7 +17,6 @@
         <img src="assets/icons/linkedIn-btn.png" alt="LinkedIn">
       </a>
       
-      <!-- Zeigt nur das Bild der aktuellen Sprache an -->
       <img *ngIf="currentLanguage === 'de'" src="assets/icons/de.png" alt="deutsch" (click)="switchLanguage('en')">
       <img *ngIf="currentLanguage === 'en'" src="assets/icons/en.png" alt="english" (click)="switchLanguage('de')">
     </div>

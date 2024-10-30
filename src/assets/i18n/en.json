@@ -1,5 +1,94 @@
 {
-    "Header" : {
-        "About me": "Über mich"
+  "HEADER": {
+    "ABOUT_ME": "About Me"
+  },
+
+  "HERO": {},
+
+  "ABOUT_ME": {
+    "TITLE": "About me",
+    "INTRO": "Hi there! I'm Florian, a frontend developer from Cologne, Germany with a passion for crafting user-friendly digital experiences. I focus on translating complex ideas into appealing, functional designs, always with an eye for detail and a solutions-driven approach. Let's team up and bring something extraordinary to life",
+    "LOCATION": {
+      "TEXT": "Although I am based in Cologne, I am not tied to a fixed location. I work flexibly remotely and support companies throughout Germany with my expertise to implement digital projects efficiently."
+    },
+    "DEVELOPMENT": {
+      "TEXT": "From the initial idea to the completion of your project, I will guide you through all stages of development. Open to new challenges and always eager to expand my knowledge and skills, I work with you to create a solution tailored to your needs and those of your users."
+    },
+    "PROGRAMMING": {
+      "TEXT": "In my field, programming goes beyond merely writing code; it's a creative approach to solving problems. I understand both technical development and the importance of user-centered design for creating engaging, intuitive experiences."
     }
+  },
+
+  "SKILLS": {
+    "TITLE": "Skills",
+    "DESCRIPTION": "I have worked on various projects using different front-end technologies. I enjoy trying out new tools and techniques to learn and keep up with the latest in web development.",
+    "LOOKING_FOR": "Looking for",
+    "ANOTHER_SKILL": "another skill",
+    "CONTACT_TEXT": "Feel free to contact me. I look forward to expanding on my previous knowledge.",
+    "GET_IN_TOUCH": "Get in touch",
+    "LEARNING": {
+      "TITLE": "Continually",
+      "SUBTITLE": "learning",
+      "INTEREST": "I have special interest in learning",
+      "PYTHON": "Python"
+    }
+  },
+
+  "PORTFOLIO": {
+    "INTRO": "Here is a selection of my projects - interact with the projects to see my skills in action.",
+    "PROJECTS": {
+      "JOIN": {
+        "DESCRIPTION": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories"
+      },
+      "EL_POLLO_LOCO": {
+        "DESCRIPTION": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and beer bottles to fight against the crazy boss chicken"
+      }
+    }
+  },
+
+  "CONTACT": {
+    "TITLE": "Contact",
+    "HEADER": {
+      "TITLE": "Got a problem to solve?",
+      "DESCRIPTION": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
+      "CALL_TO_ACTION": "Need a Frontend Developer?",
+      "CONTACT_ME": "Contact me!"
+    },
+    "FORM": {
+      "NAME": {
+        "LABEL": "Your name",
+        "PLACEHOLDER": "Enter your name",
+        "ERRORS": {
+          "REQUIRED": "Name is required",
+          "MIN_LENGTH": "Name must be at least 2 characters long"
+        }
+      },
+      "EMAIL": {
+        "LABEL": "Your email",
+        "PLACEHOLDER": "max.mustermann@example.com",
+        "ERRORS": {
+          "REQUIRED": "Email is required",
+          "INVALID": "Not a valid email"
+        }
+      },
+      "MESSAGE": {
+        "LABEL": "Your message",
+        "PLACEHOLDER": "Enter your message",
+        "ERRORS": {
+          "REQUIRED": "Message is required",
+          "MIN_LENGTH": "Message must be at least 5 characters long"
+        }
+      },
+      "PRIVACY": {
+        "TEXT": "I've read the",
+        "POLICY_LINK": "privacy policy",
+        "AGREEMENT": "and agree to the processing of my data as outlined."
+      },
+      "SUBMIT": "Send message"
+    }
+  },
+
+  "FOOTER": {
+    "IMPRINT": "Imprint"
+  }
 }

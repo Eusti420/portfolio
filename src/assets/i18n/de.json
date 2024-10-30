@@ -1,5 +1,92 @@
 {
-    "Header" : {
-        "About me": "Über mich"
+  "HEADER": {
+    "ABOUT_ME": "Über mich"
+  },
+
+  "ABOUT_ME": {
+    "TITLE": "Über mich",
+    "INTRO": "Hallo! Ich bin Florian, ein Frontend-Entwickler aus Köln, Deutschland, mit einer Leidenschaft für die Gestaltung benutzerfreundlicher digitaler Erlebnisse. Mein Fokus liegt darauf, komplexe Ideen in ansprechende, funktionale Designs zu übersetzen – stets mit einem Blick fürs Detail und einer lösungsorientierten Herangehensweise. Lass uns zusammenkommen und etwas Außergewöhnliches auf die Beine stellen!",
+    "LOCATION": {
+      "TEXT": "Auch wenn ich in Köln ansässig bin, bin ich nicht an einen festen Standort gebunden. Ich arbeite flexibel remote und unterstütze Unternehmen deutschlandweit mit meiner Expertise, um digitale Projekte effizient umzusetzen."
+    },
+    "DEVELOPMENT": {
+      "TEXT": "Von der ersten Idee bis zur Fertigstellung Ihres Projekts begleite ich Sie durch alle Entwicklungsphasen. Offen für neue Herausforderungen und stets darauf bedacht, mein Wissen und meine Fähigkeiten zu erweitern, arbeite ich mit Ihnen zusammen an einer maßgeschneiderten Lösung, die Ihren Bedürfnissen und denen Ihrer Nutzer entspricht."
+    },
+    "PROGRAMMING": {
+      "TEXT": "In meinem Beruf geht es beim Programmieren nicht nur darum, Code zu schreiben; es ist eine kreative Art der Problemlösung. Ich verstehe sowohl die technische Entwicklung als auch die Bedeutung von nutzerzentriertem Design für ansprechende, intuitive Erlebnisse."
     }
+  },
+
+  "SKILLS": {
+    "TITLE": "Skills",
+    "DESCRIPTION": "Ich habe an verschiedenen Projekten mit unterschiedlichen Frontend-Technologien gearbeitet. Es macht mir Freude, neue Tools und Techniken auszuprobieren, um zu lernen und mit den neuesten Entwicklungen im Webdesign Schritt zu halten.",
+    "LOOKING_FOR": "Suchen Sie nach einer",
+    "ANOTHER_SKILL": "weiteren Fähigkeit",
+    "CONTACT_TEXT": "Zögern Sie nicht, mich zu kontaktieren. Ich freue mich darauf, mein vorheriges Wissen zu erweitern.",
+    "GET_IN_TOUCH": "Kontakt aufnehmen",
+    "LEARNING": {
+      "TITLE": "Kontinuierliches",
+      "SUBTITLE": "Lernen",
+      "INTEREST": "Ich habe ein besonderes Interesse am Lernen von",
+      "PYTHON": "Python"
+    }
+  },
+
+  "PORTFOLIO": {
+    "INTRO": "Hier ist eine Auswahl meiner Projekte - interagieren Sie mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+    "PROJECTS": {
+      "JOIN": {
+        "DESCRIPTION": "Task-Manager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu"
+      },
+      "EL_POLLO_LOCO": {
+        "DESCRIPTION": "Jump & Run Spiel basierend auf objektorientiertem Ansatz. Hilf Pepe dabei, Münzen und Bierflaschen zu finden, um gegen das verrückte Boss-Huhn zu kämpfen"
+      }
+    }
+  },
+
+  "CONTACT": {
+    "TITLE": "Kontakt",
+    "HEADER": {
+      "TITLE": "Haben Sie ein Problem zu lösen?",
+      "DESCRIPTION": "Kontaktieren Sie mich über dieses Formular. Ich freue mich darauf, von Ihnen zu hören, Ihre Ideen kennenzulernen und mit meiner Arbeit zu Ihren Projekten beizutragen.",
+      "CALL_TO_ACTION": "Brauchen Sie einen Frontend-Entwickler?",
+      "CONTACT_ME": "Kontaktieren Sie mich!"
+    },
+    "FORM": {
+      "NAME": {
+        "LABEL": "Ihr Name",
+        "PLACEHOLDER": "Geben Sie Ihren Namen ein",
+        "ERRORS": {
+          "REQUIRED": "Name ist erforderlich",
+          "MIN_LENGTH": "Name muss mindestens 2 Zeichen lang sein"
+        }
+      },
+      "EMAIL": {
+        "LABEL": "Ihre E-Mail",
+        "PLACEHOLDER": "max.mustermann@beispiel.de",
+        "ERRORS": {
+          "REQUIRED": "E-Mail ist erforderlich",
+          "INVALID": "Keine gültige E-Mail-Adresse"
+        }
+      },
+      "MESSAGE": {
+        "LABEL": "Ihre Nachricht",
+        "PLACEHOLDER": "Geben Sie Ihre Nachricht ein",
+        "ERRORS": {
+          "REQUIRED": "Nachricht ist erforderlich",
+          "MIN_LENGTH": "Nachricht muss mindestens 5 Zeichen lang sein"
+        }
+      },
+      "PRIVACY": {
+        "TEXT": "Ich habe die",
+        "POLICY_LINK": "Datenschutzerklärung",
+        "AGREEMENT": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu."
+      },
+      "SUBMIT": "Nachricht senden"
+    }
+  },
+
+  "FOOTER": {
+    "IMPRINT": "Impressum"
+  }
 }
