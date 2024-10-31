@@ -23,7 +23,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    z-index: 3; 
+    z-index: 1; 
     background-color: #141D2F;
 
     &::before {
@@ -36,7 +36,7 @@
         background-image: url(../../assets/img/purple-shadow.png), url(../../assets/img/blue-shadow.png);
         background-repeat: no-repeat;
         background-position: -150px center, calc(100% + 500px) top;
-        z-index: 2; 
+        z-index: -1; 
     }
 
     
@@ -52,7 +52,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    z-index: 3;
+    z-index: 1;
     background-color: #141D2F;
     backdrop-filter: blur(65px);
 
@@ -67,7 +67,7 @@
         background-position: calc(100% + 40px) top, bottom left;
         background-repeat: no-repeat;
         background-size: contain;
-        z-index: 2;
+        z-index: -1;
     }
 
 

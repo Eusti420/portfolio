@@ -1,15 +1,18 @@
 <section class="background-color">
-    <a href="#hero">Florian</a>
-    <input type="checkbox" id="menu-toggle" class="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">
-        <span class="burger-line"></span>
-        <span class="burger-line"></span>
-        <span class="burger-line"></span>
-    </label>
-    <div class="menu">
-        <a href="#aboutMe" (click)="closeMenu()">{{ 'HEADER.ABOUT_ME' | translate }}</a>
-        <a href="#skills" (click)="closeMenu()">Skills</a>
-        <a href="#portfolio" (click)="closeMenu()">Portfolio</a>
+    <div class="header-content">
+        <a href="#hero">Florian</a>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </label>
+        <div class="menu">
+            <a href="#aboutMe" (click)="closeMenu()">{{ 'HEADER.ABOUT_ME' | translate }}</a>
+            <a href="#skills" (click)="closeMenu()">Skills</a>
+            <a href="#portfolio" (click)="closeMenu()">Portfolio</a>
+        </div>
     </div>
 </section>
+
 
