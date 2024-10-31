@@ -275,13 +275,15 @@ p {
   .project-container {
     .overlay {
       .description {
-        height: 220px;
+        height: 200px;
         h3 {
           font-size: 20px;
         }
 
         p {
-          padding: 12px 24px 12px 24px;
+          font-size: 14px;
+          padding: 4px 8px 4px 8px;
+
         }
 
         div {
@@ -309,6 +311,12 @@ p {
     }
   }
 
+  .project-intro-container {
+    padding-left: 4px;
+    padding-right: 4px;
+    font-size: 14px;
+  }
+
   .project-container {
     .overlay {
       .buttons {
@@ -318,13 +326,46 @@ p {
 
       .button-git {
         padding: 6px 12px;
-        font-size: 20px;
+        font-size: 14px;
       }
 
       .button-test {
-        font-size: 20px;
+        font-size: 14px;
         padding: 6px 12px;
       }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .project-container {
+    .overlay {
+      .description {
+        height: 160px;
+        h3 {
+          font-size: 18px;
+        }
+
+        p {
+          font-size: 12px;
+          padding: 4px 8px 4px 8px;
+
+        }
+
+        div {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .button-git {
+      padding: 2px 4px;
+      font-size: 14px;
+    }
+
+    .button-test {
+      font-size: 14px;
+      padding: 2px 4px;
     }
   }
 }

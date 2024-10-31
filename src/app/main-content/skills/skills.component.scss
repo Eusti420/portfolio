@@ -35,9 +35,9 @@ section {
 
 .p-header {
   color: #ffffff;
-  font-size: 32px !important;
+  font-size: 32px; 
   font-weight: 700;
-  padding-top: 32px !important;
+  padding-top: 32px;
 }
 
 .highlight-skill {
@@ -251,6 +251,20 @@ h1 {
 }
 
 @media (max-width: 470px) {
+section {
+  .description-content {
+    padding-left: 4px;
+    padding-right: 4px;
+    font-size: 14px;
+    
+  }
+  .p-header {
+    font-size: 20px;
+  }
+}
+
+ 
+
   h1 {
     font-size: 32px;
   }

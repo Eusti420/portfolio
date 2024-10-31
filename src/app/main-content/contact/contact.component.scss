@@ -173,6 +173,10 @@ section {
   }
   .contact-container {
     .contact-info {
+      p {
+        font-size: 14px;
+      }
+
       h2 {
         font-size: 20px;
       }
@@ -182,7 +186,6 @@ section {
   .btn-up {
     position: fixed;
     bottom: 5vh;
-    left: 63%;
-    transform: translateX(-50%);
+    right: 44%;
   }
 }
