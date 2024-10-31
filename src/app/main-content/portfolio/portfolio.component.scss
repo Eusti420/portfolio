@@ -13,6 +13,7 @@ section {
 .background {
   background-color: #141d2f;
   backdrop-filter: blur(65px);
+  position: relative; 
 
   &::before {
     content: "";
@@ -26,7 +27,16 @@ section {
     background-repeat: no-repeat;
     z-index: -1;
   }
+
+  @media (min-width: 1921px) {
+    background-image: none; 
+    &::before {
+      display: none; 
+    }
+  }
 }
+
+
 
 .headline {
   display: flex;
@@ -58,6 +68,8 @@ section {
 
 .portfolio-content-container {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 48px;
   padding-left: 100px;
   padding-right: 100px;
@@ -66,6 +78,11 @@ section {
   background-position: bottom left;
   background-repeat: no-repeat;
   background-size: contain;
+
+  
+  @media (min-width: 1921px) {
+    background-image: none;
+}
 }
 
 .project-container {
@@ -202,65 +219,6 @@ p {
   position: relative;
   z-index: 3;
 
-  .testimonials-layout {
-    border-radius: 32px;
-    border: 4px solid #9747ff;
-    padding: 48px 96px;
-    width: 800px;
-    height: 272px;
-    margin-right: 48px;
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: -20px;
-      left: -40px;
-      background-image: url("../../../assets/icons/quotation-mark.png");
-      background-size: 60px 40px;
-      background-repeat: no-repeat;
-      width: 60px;
-      height: 40px;
-      z-index: 2;
-    }
-
-    .testimonials-img-container {
-      display: flex;
-      align-items: center;
-      border-radius: 50%;
-      border: 4px solid #70e61c;
-
-      .testimonials-img {
-        object-fit: cover;
-        height: 272px;
-        width: 272px;
-      }
-    }
-
-    .custom-line-testimonial {
-      height: 2px;
-      background-color: #1cdae6;
-      border: none;
-      width: 200px;
-    }
-  }
-
-  .custom-line-testimonial-img {
-    height: 4px;
-    background-color: #70e61c;
-    border: none;
-    width: calc(100vw - 100px - 800px - 48px - 272px);
-  }
-
-  .testimonials-comment {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
 }
 
 // media //

@@ -3,10 +3,12 @@ section {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1920px;
     padding: 37px 32px;
     z-index: 1000;
     border-top: 2px solid #70e61c;
+    position: absolute;
+    left: 0;
+    right: 0;
 
     > div {
         color: #FFFFFF;
@@ -39,6 +41,7 @@ section {
         display: flex;
         flex: 1;
         align-items: center;
+        justify-content: flex-end;
         gap: 48px;
         height: 64px;
         

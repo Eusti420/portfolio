@@ -12,6 +12,10 @@ section {
     background-attachment: scroll;  
     background-size: auto;  
     object-fit: cover;
+
+    @media (min-width: 1921px) {
+        background-image: none;
+    }
 }
 
 .header-container {
@@ -137,6 +141,13 @@ section {
 }
 
   // Media //
+
+@media (max-width: 1600px) {
+    section {
+        background-position: -350px center, calc(100% + 600px) top;
+    }
+
+}  
 
 
 @media (max-width: 1100px)  {
