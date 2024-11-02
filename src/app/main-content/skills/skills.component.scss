@@ -1,11 +1,10 @@
 section {
   display: flex;
   justify-content: space-between;
+  position: relative;
   gap: 60px;
   width: 100%;
   max-width: 1920px;
-  padding-bottom: 100px;
-  padding-top: 110px;
 }
 
 .skills-container {
@@ -178,7 +177,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 24px;
+  padding-bottom: 12px;
 }
 
 h1 {
@@ -203,6 +202,8 @@ h1 {
 @media (max-width: 1100px) {
   section {
     flex-direction: column-reverse;
+    padding-top: 120px;
+
 
     .custom-line-hidden {
       flex: 1;

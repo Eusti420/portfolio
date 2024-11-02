@@ -4,9 +4,9 @@ section {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  padding-bottom: 200px;
+  padding-bottom: 240px;
   max-width: 1920px;
-  padding-top: 100px;
+  padding-top: 120px;
 }
 
 .headline {
@@ -15,8 +15,8 @@ section {
   width: 100%;
 
   .custom-line-hidden {
-    flex: 1; // Nimmt den Platz links ein
-    visibility: hidden; // Macht die Linie unsichtbar
+    flex: 1; 
+    visibility: hidden; 
   }
 
   h1 {
@@ -26,7 +26,7 @@ section {
     margin: 0;
     padding: 0;
     text-align: center;
-    flex-shrink: 0; // Verhindert das Skalieren
+    flex-shrink: 0; 
   }
 
   .custom-line {
@@ -35,8 +35,8 @@ section {
     border: none;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
-    flex: 1; // Nimmt den Platz rechts ein
-    margin-left: 24px; // Abstand von 24px zur h1
+    flex: 1; 
+    margin-left: 24px; 
   }
 }
 

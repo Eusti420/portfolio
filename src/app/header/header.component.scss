@@ -27,18 +27,76 @@ section {
 
 .menu {
   display: flex;
-  gap: 29px;
+  align-items: center;
+  gap: 30px;
 
   > a {
     color: #ffffff;
     text-decoration: none;
     font-size: 20px;
+    position: relative; 
+    
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #70e61c;
+      transition: width 0.3s ease;
+    }
+
+    &:hover {
+      cursor: pointer;
+      color: #70e61c;
+      transition: color 0.3s ease;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+.reference-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 48px;
+  height: 64px;
+
+  a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 30px;
+      width: 30px;
+
+      img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          transition: transform 125ms ease-in-out;
+
+          &:hover {
+              transform: scale(1.2);
+              cursor: pointer;
+          }
+      }
   }
 
-  > a:hover {
-    cursor: pointer;
-    color: #70e61c;
-    transition: 100ms ease-in;
+  > img {
+      height: 30px;
+      width: 30px;
+      object-fit: cover;
+      transition: transform 125ms ease-in-out;
+
+      &:hover {
+          transform: scale(1.2);
+          cursor: pointer;
+      }
   }
 }
 
@@ -114,6 +172,7 @@ section {
   .menu {
     display: none;
     flex-direction: column;
+    justify-content: center;
     position: absolute;
     top: 100%;
     left: 0;

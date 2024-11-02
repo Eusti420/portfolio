@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 
 @Component({
@@ -18,5 +18,19 @@ export class HeaderComponent {
     if (checkbox) {
       checkbox.checked = false;
     }
+  }
+
+  currentLanguage = 'de';
+
+  constructor(private translate: TranslateService) {
+ 
+    this.translate.setDefaultLang('de');
+    this.translate.use('de'); 
+  }
+  
+
+  switchLanguage(language: string) {
+    this.currentLanguage = language;
+    this.translate.use(language);
   }
 }

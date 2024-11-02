@@ -11,6 +11,11 @@
             <a href="#aboutMe" (click)="closeMenu()">{{ 'HEADER.ABOUT_ME' | translate }}</a>
             <a href="#skills" (click)="closeMenu()">Skills</a>
             <a href="#portfolio" (click)="closeMenu()">Portfolio</a>
+            <div class="reference-btn-container">
+                <img *ngIf="currentLanguage === 'de'" src="assets/icons/de.png" alt="deutsch" (click)="switchLanguage('en')">
+                <img *ngIf="currentLanguage === 'en'" src="assets/icons/en.png" alt="english" (click)="switchLanguage('de')">
+            </div>
+           
         </div>
     </div>
 </section>
