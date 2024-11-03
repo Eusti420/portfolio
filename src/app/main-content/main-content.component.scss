@@ -68,7 +68,22 @@
     }
 }
 
+.bow-large-screen {
+    display: none; /* Standardmäßig versteckt */
+    position: relative;
+    width: 100%;  /* Breite anpassen, um den Bogen über den Content hinaus zu ziehen */
+    height: auto;
+    top: 1100px;  /* Die genaue Höhe anpassen, um den Bogen in der richtigen Position zu halten */
+    z-index: 4;
 
+    >img {
+        object-fit: cover;
+    }
+
+    @media (min-width: 1921px) {
+        display: block; /* Nur auf großen Bildschirmen anzeigen */
+    }
+}
 
 .hero-container,
 .about-container,
