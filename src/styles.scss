@@ -31,25 +31,27 @@ body {
   align-items: center;
 }
 
+/* Globales Styling für die Scrollbar */
 ::-webkit-scrollbar {
-  width: 12px; 
+  width: 12px; /* Breite des Scrollbars */
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #808080 
+  background-color: #141D2F; /* Hintergrund der Scrollspur */
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #808080;
-  border-radius: 12px; 
-  -webkit-border-radius: 12px; 
-
+  background-color: #1CDAE6; /* Farbe des Scrollbalkens */
+  border-radius: 6px; /* Abgerundete Ecken */
+  -webkit-border-radius: 6px; /* Unterstützung für Webkit-Browser */
 }
 
+/* Firefox Scrollbar */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #808080;
+  scrollbar-color: #1CDAE6 #141D2F;
 }
+
 
 
 /* poppins-200 - latin */
