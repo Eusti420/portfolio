@@ -85,6 +85,12 @@ section {
 // -------------------- MEDIA -------------------- //
 
 @media (max-width: 790px) {
+    .headline {
+        h1 {
+            font-size: 50px;
+        }
+    }
+
     .imprint {
         padding-left: 25px;
         padding-right: 25px;
@@ -93,5 +99,19 @@ section {
     .link-back {
         padding-left: 25px;
         padding-right: 25px;
+    }
+}
+
+@media (max-width: 470px) {
+    .headline {
+        h1 {
+            font-size: 32px;
+        }
+    }
+
+    .imprint {
+        p {
+            font-size: 14px;
+        }
     }
 }
