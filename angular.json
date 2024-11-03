@@ -24,7 +24,8 @@
               "zone.js"
             ],
             "allowedCommonJsDependencies": [
-              "lodash"
+              "lodash",
+              "aos"
             ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
