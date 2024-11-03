@@ -1,6 +1,6 @@
 <section class="background-color">
     <div class="header-content">
-        <a href="#hero">Florian</a>
+        <a (click)="navigateTo('hero')">Florian</a>
         <input type="checkbox" id="menu-toggle" class="menu-toggle">
         <label for="menu-toggle" class="menu-icon">
             <span class="burger-line"></span>
@@ -8,14 +8,19 @@
             <span class="burger-line"></span>
         </label>
         <div class="menu">
-            <a href="#aboutMe" (click)="closeMenu()">{{ 'HEADER.ABOUT_ME' | translate }}</a>
-            <a href="#skills" (click)="closeMenu()">Skills</a>
-            <a href="#portfolio" (click)="closeMenu()">Portfolio</a>
+            <a (click)="navigateTo('aboutMe')">{{ 'HEADER.ABOUT_ME' | translate }}</a>
+            <a (click)="navigateTo('skills')">Skills</a>
+            <a (click)="navigateTo('portfolio')">Portfolio</a>
             <div class="reference-btn-container">
-                <img *ngIf="currentLanguage === 'de'" src="assets/icons/de.png" alt="deutsch" (click)="switchLanguage('en')">
-                <img *ngIf="currentLanguage === 'en'" src="assets/icons/en.png" alt="english" (click)="switchLanguage('de')">
+                <img *ngIf="currentLanguage === 'de'" 
+                     src="assets/icons/de.png" 
+                     alt="deutsch" 
+                     (click)="switchLanguage('en')">
+                <img *ngIf="currentLanguage === 'en'" 
+                     src="assets/icons/en.png" 
+                     alt="english" 
+                     (click)="switchLanguage('de')">
             </div>
-           
         </div>
     </div>
 </section>
