@@ -28,9 +28,9 @@
         background-image: url(../../assets/img/purple-shadow.png), url(../../assets/img/blue-shadow.png);
         background-repeat: no-repeat;
         background-position: -150px center, calc(100% + 500px) top;
-        z-index: -1; 
+        z-index: 2; 
+        pointer-events: none;
     }
-
     
     @media (max-width: 1920px) {
         &::before {
@@ -38,6 +38,36 @@
         }
     }
 }
+
+.shadow-container-portfolio {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    background-color: #141D2F;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url(../../assets/img/green-shadow2.png), url(../../assets/img/blue-shadow1.png);
+        background-repeat: no-repeat;
+        background-position: -50px 50%, calc(100% - 0px) 20%;
+        z-index: 2;
+        pointer-events: none;
+    }
+    
+    @media (max-width: 1920px) {
+        &::before {
+            z-index: -3;
+        }
+    }
+}
+
 
 
 .hero-container,
