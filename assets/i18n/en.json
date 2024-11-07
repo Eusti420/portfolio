@@ -1,0 +1,126 @@
+{
+  "HEADER": {
+    "ABOUT_ME": "About Me"
+  },
+
+  "HERO": {},
+
+  "ABOUT_ME": {
+    "TITLE": "About me",
+    "INTRO": "Hi there! I'm Florian, a frontend developer from Cologne, Germany with a passion for crafting user-friendly digital experiences. I focus on translating complex ideas into appealing, functional designs, always with an eye for detail and a solutions-driven approach. Let's team up and bring something extraordinary to life",
+    "LOCATION": {
+      "TEXT": "Although I am based in Cologne, I am not tied to a fixed location. I work flexibly remotely and support companies throughout Germany with my expertise to implement digital projects efficiently."
+    },
+    "DEVELOPMENT": {
+      "TEXT": "From the initial idea to the completion of your project, I will guide you through all stages of development. Open to new challenges and always eager to expand my knowledge and skills, I work with you to create a solution tailored to your needs and those of your users."
+    },
+    "PROGRAMMING": {
+      "TEXT": "In my field, programming goes beyond merely writing code; it's a creative approach to solving problems. I understand both technical development and the importance of user-centered design for creating engaging, intuitive experiences."
+    }
+  },
+
+  "SKILLS": {
+    "TITLE": "Skills",
+    "DESCRIPTION": "I have worked on various projects using different front-end technologies. I enjoy trying out new tools and techniques to learn and keep up with the latest in web development.",
+    "LOOKING_FOR": "Looking for",
+    "ANOTHER_SKILL": "another skill",
+    "CONTACT_TEXT": "Feel free to contact me. I look forward to expanding on my previous knowledge.",
+    "GET_IN_TOUCH": "Get in touch",
+    "LEARNING": {
+      "TITLE": "Continually",
+      "SUBTITLE": "learning",
+      "INTEREST": "I have special interest in learning",
+      "PYTHON": "Python"
+    }
+  },
+
+  "PORTFOLIO": {
+    "INTRO": "Here is a selection of my projects - interact with the projects to see my skills in action.",
+    "PROJECTS": {
+      "JOIN": {
+        "DESCRIPTION": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories"
+      },
+      "EL_POLLO_LOCO": {
+        "DESCRIPTION": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and beer bottles to fight against the crazy boss chicken"
+      }
+    }
+  },
+
+  "CONTACT": {
+    "TITLE": "Contact",
+    "HEADER": {
+      "TITLE": "Got a problem to solve?",
+      "DESCRIPTION": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
+      "CALL_TO_ACTION": "Need a Frontend Developer?",
+      "CONTACT_ME": "Contact me!"
+    },
+    "FORM": {
+      "NAME": {
+        "LABEL": "Your name",
+        "PLACEHOLDER": "Enter your name",
+        "ERRORS": {
+          "REQUIRED": "Name is required",
+          "MIN_LENGTH": "Name must be at least 2 characters long"
+        }
+      },
+      "EMAIL": {
+        "LABEL": "Your email",
+        "PLACEHOLDER": "max.mustermann@example.com",
+        "ERRORS": {
+          "REQUIRED": "Email is required",
+          "INVALID": "Not a valid email"
+        }
+      },
+      "MESSAGE": {
+        "LABEL": "Your message",
+        "PLACEHOLDER": "Enter your message",
+        "ERRORS": {
+          "REQUIRED": "Message is required",
+          "MIN_LENGTH": "Message must be at least 5 characters long"
+        }
+      },
+      "PRIVACY": {
+        "TEXT": "I've read the",
+        "POLICY_LINK": "privacy policy",
+        "AGREEMENT": "and agree to the processing of my data as outlined."
+      },
+      "SUBMIT": "Send message"
+    }
+  },
+
+  "FOOTER": {
+    "IMPRINT": "Imprint"
+  },
+
+  "IMPRINT": {
+    "TITLE": "Legal Notice",
+    "DETAILS": {
+      "HEADING": "Legal Notice",
+      "LEGAL_INFO": "Information according to § 5 TMG"
+    },
+    "CONTACT": {
+      "HEADING": "Contact",
+      "PHONE": "Phone: +49 (0) 173 - 66 54 729",
+      "EMAIL": "Email: florian.eusterholz@gmail.com"
+    },
+    "RESPONSIBLE": {
+      "HEADING": "Responsible for content according to § 55 para. 2 RStV"
+    },
+    "LIABILITY_CONTENT": {
+      "HEADING": "Liability for Content",
+      "PARAGRAPH_1": "As a service provider, we are responsible for our own content on these pages according to § 7 para.1 TMG under the general laws. According to §§ 8 to 10 TMG, however, we as a service provider are not obligated to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity.",
+      "PARAGRAPH_2": "Obligations to remove or block the use of information under general law remain unaffected. However, liability in this regard is only possible from the point in time at which a concrete legal violation becomes known. Upon becoming aware of corresponding legal violations, we will remove such content immediately."
+    },
+    "LIABILITY_LINKS": {
+      "HEADING": "Liability for Links",
+      "PARAGRAPH_1": "Our offer contains links to external third-party websites, over whose content we have no influence. Therefore, we cannot assume any liability for these external contents. The respective provider or operator of the linked pages is always responsible for their content. The linked pages were checked for possible legal violations at the time of linking. Illegal content was not recognizable at the time of linking.",
+      "PARAGRAPH_2": "However, a permanent monitoring of the content of the linked pages is not reasonable without concrete evidence of a legal violation. Upon becoming aware of legal violations, we will remove such links immediately."
+    },
+    "COPYRIGHT": {
+      "HEADING": "Copyright",
+      "PARAGRAPH_1": "The content and works created by the site operators on these pages are subject to German copyright law. The reproduction, editing, distribution, and any kind of exploitation outside the limits of copyright law require the written consent of the respective author or creator. Downloads and copies of this site are only permitted for private, non-commercial use.",
+      "PARAGRAPH_2": "Insofar as the content on this site was not created by the operator, the copyrights of third parties are respected. In particular, third-party content is marked as such. Should you nevertheless become aware of a copyright infringement, please inform us accordingly. Upon becoming aware of legal violations, we will remove such content immediately."
+    },
+    "BACK": "Back"
+  }
+}
